@@ -1,0 +1,140 @@
+Build a complete, production-ready website for RWB Snow Removal LLC using the media pack included with this prompt. You are responsible for the design, copy, responsive behavior, animations, accessibility, performance, and GitHub Pages compatibility. Do not return a mockup, design notes, or partial snippets. Create and revise the actual working files.
+
+DEPLOYMENT REQUIREMENT
+
+The site must deploy directly from the GitHub repository's main branch and /(root) using GitHub Pages. Put index.html and every required public file at the repository root. Use plain HTML, CSS, and JavaScript with no build step, no server, and no framework requirement. Use relative paths that work under a GitHub Pages repository subpath. Do not use absolute paths beginning with /. The completed site must also work when index.html is opened locally.
+
+BUSINESS INFORMATION
+
+Business name: RWB Snow Removal LLC
+Phone: 347-517-9920
+Phone link: tel:+13475179920
+Email: vasiliostk@gmail.com
+Email link: mailto:vasiliostk@gmail.com
+Hours: Open 24 hours
+Experience: 6 years in business
+Service area: all five New York City boroughs, Nassau County, and Suffolk County
+Services: snow removal, towing, junk removal, power washing, and soft washing
+Social media: none yet, so do not show fake or empty social icons
+Primary conversion: phone calls
+
+Do not claim that the company is licensed, bonded, insured, certified, family-owned, veteran-owned, locally owned, or the number-one provider unless that information appears above. Do not invent reviews, ratings, prices, project counts, guarantees, response times, addresses, equipment specifications, or customer names. Do not add a contact form because there is no backend. Use call and email links instead.
+
+VOICE AND COPY
+
+Write concise, direct copy that sounds like a real local service business. It should feel confident, practical, and human. Avoid corporate filler, exaggerated promises, generic marketing clichés, and language that sounds machine-generated. Never use an em dash anywhere in visible copy, metadata, alt text, comments, or code-generated text. Avoid phrases such as "your trusted partner," "we've got you covered," "top-notch," "hassle-free," "comprehensive solutions," "experience the difference," and "customer satisfaction is our priority."
+
+Recommended core headline: ONE CALL. ANY SEASON. ANY HOUR.
+
+Recommended hero copy: Snow removal, towing, junk removal, power washing, and soft washing across New York City and Long Island.
+
+Recommended trust points: OPEN 24 HOURS, 6 YEARS IN BUSINESS, NYC + LONG ISLAND, RESIDENTIAL + COMMERCIAL.
+
+Recommended final CTA headline: NEED IT CLEARED, HAULED, WASHED, OR TOWED?
+
+ABOUT COPY
+
+RWB Snow Removal LLC has served New York City and Long Island for six years. From overnight storms to property cleanups and exterior washing, we show up ready to get the job done.
+
+You may improve the wording while preserving every factual limitation and the natural tone.
+
+VISUAL DIRECTION
+
+Create a premium, rugged, modern service website based on the logo. It should look custom-built for a real snow and property-service company, not like a generic patriotic template. The visual system should use deep navy, white, controlled red accents, steel gray, and icy blue. Red should mainly identify actions and important status information. Avoid covering the site in flags, stars, stripes, shields, excessive gradients, glass cards, or floating blobs.
+
+Suggested palette:
+Navy black: #050B16
+Deep navy: #08172B
+Steel navy: #122A46
+Signal red: #C51624
+Bright red: #EF233C
+Snow white: #F7FAFC
+Ice blue: #BFE6F5
+Steel gray: #8C9AAA
+
+Use a strong condensed display font for major headings and a highly readable sans-serif font for body copy. If using Google Fonts, include reliable system fallbacks. Use bold scale, sharp spacing, thin technical lines, restrained texture, and confident asymmetry. Do not center every section. Preserve generous whitespace and clear reading order.
+
+MEDIA INTEGRATION
+
+Use every web-ready media file somewhere meaningful. Do not leave any supplied photo or video unused.
+
+assets/images/snowplow-cab.webp
+Use as the main hero background. Preserve the view from inside the plow. Apply a deliberate dark overlay for text contrast, not a heavy blur.
+
+assets/images/cleared-road.webp
+Use for the snow removal feature and the winter side of the seasonal transition.
+
+assets/images/pool-patio.webp
+Use as a premium finished-work image for soft washing and property cleaning. Let its clean white geometry influence the layout.
+
+assets/images/power-washing.webp
+Use for the power-washing section. The visible before-and-after line in the bricks should be prominent.
+
+assets/images/rwb-logo-transparent.png
+Use in the transparent navigation treatment, hero, and footer where appropriate.
+
+assets/images/rwb-logo.webp
+Use as a lightweight fallback, structured-data image, or location where a solid background version works better.
+
+assets/video/rwb-work-reel.mp4
+Use in a real project reel section. It must be muted, playsinline, looped, and lazy-loaded or loaded only when near the viewport. Provide controls or an obvious play/pause button. Do not autoplay it if the user requests reduced motion or data-saving behavior.
+
+assets/video/rwb-work-reel-poster.webp
+Use as the video poster and fallback image.
+
+The originals directory is reference material only. The live website should use the optimized files under assets unless a specific original is genuinely required. Add useful alt text based only on what is visible. Do not imply project locations that are not known.
+
+SITE STRUCTURE
+
+1. Sticky navigation with logo, Services, Work, About, Service Area, and a red Call Now button.
+2. Full-height hero using the snowplow cab photo, large headline, supporting copy, Call 347-517-9920 button, and View Services action.
+3. Compact trust bar showing Open 24 Hours, 6 Years in Business, NYC + Long Island, and Residential + Commercial.
+4. Services section containing Snow Removal, Towing, Junk Removal, Power Washing, and Soft Washing. Snow Removal is the lead service, but clearly communicate year-round availability.
+5. Seasonal story section connecting winter services with warm-weather property services.
+6. Selected work section using an editorial layout rather than a generic equal-square grid. Include the project reel.
+7. About section using the approved facts only.
+8. Service area section listing Brooklyn, Queens, Manhattan, The Bronx, Staten Island, Nassau County, and Suffolk County. A stylized SVG regional coverage graphic is welcome, but do not draw precise boundaries or make exact travel-time promises.
+9. Strong final call section with the phone number, email, and 24-hour availability.
+10. Footer with logo, services, service areas, phone, email, hours, copyright, and a small "Website by Bellmore Web Design" credit.
+
+THREE REQUIRED WOW FEATURES
+
+WOW 1: INTERACTIVE PLOW HERO
+
+Create a convincing frost or snow-clearing reveal over the hero image. On initial load, the foreground should feel lightly frosted. As the user scrolls through the first viewport, a curved windshield or plow-shaped clearing mask reveals the sharper road image underneath. Add restrained depth to the headline and logo using layered transforms. The image must remain recognizable and the call button must remain instantly usable. Use CSS masks, gradients, SVG masks, or canvas only if it stays smooth. On mobile, simplify the effect. With reduced motion enabled, show the final clear state immediately.
+
+WOW 2: SEASON-CHANGE SCROLL TRANSITION
+
+Build a full-width pinned or near-pinned transition that shifts visually from winter service to warm-weather property care as the visitor scrolls. Begin with the cleared-road image in a cold navy winter treatment and transition into the pool-patio image with clean, brighter lighting. Use a diagonal plow-blade-style reveal or another purposeful mask. The copy should progress naturally through these ideas: "When the snow falls." "When the weather clears." "RWB is still working." The transition should make the service range understandable, not merely decorative. Provide a clean stacked fallback on small screens and when reduced motion is enabled.
+
+WOW 3: INTERACTIVE SERVICE MACHINE
+
+Create a custom lightweight inline SVG or CSS service-machine scene inspired by the RWB plow-truck logo. Do not trace or replace the logo. Build an original simplified scene that reacts as each service enters view. Examples: the plow lowers for snow removal, a tow hook extends for towing, debris loads for junk removal, and a water sweep reveals a clean surface for washing. Keep the interaction controlled by scroll progress or service selection. It must feel polished, remain legible on mobile, and must not rely on a large 3D library or external model file.
+
+SCROLL MOTION
+
+Use simple scroll reveals for ordinary content so the WOW moments remain special. Headings may rise 20 to 30 pixels while fading in. Paragraphs can follow with a small delay. Service cards can enter in sequence. Trust numbers may count up once. Gallery images can reveal through vertical or diagonal masks. Do not make every element fly, bounce, rotate, or pulse. No perpetual button animation. Use IntersectionObserver and requestAnimationFrame where appropriate. Respect prefers-reduced-motion throughout.
+
+MOBILE EXPERIENCE
+
+Design mobile-first and test at 320, 375, 390, 430, 768, 1024, 1366, and 1440 pixels wide. Add a fixed bottom Call Now bar on small screens without covering content. Keep every tap target at least 44 by 44 pixels. Use a compact accessible menu. Prevent horizontal overflow. Ensure the large logo never dominates the viewport. Keep body text at least 16 pixels. Reframe portrait media deliberately. Simplify expensive effects on mobile rather than removing the site's personality.
+
+ACCESSIBILITY AND QUALITY
+
+Use semantic landmarks, one H1, logical heading order, keyboard-operable navigation, visible focus states, accessible button names, sufficient contrast, descriptive alt text, and an accessible video play or pause control. The mobile menu must trap focus appropriately or otherwise behave as a fully accessible disclosure menu. Do not hide meaningful text inside images. Animations must not block navigation or reading.
+
+PERFORMANCE
+
+Aim for excellent mobile Core Web Vitals. Use responsive images, explicit width and height attributes, lazy loading below the fold, content-visibility where safe, font-display swap, and minimal JavaScript. Preload only the true hero asset. Avoid large animation dependencies. Prefer native CSS, inline SVG, IntersectionObserver, and requestAnimationFrame. Do not load the full video until it is near the viewport. Avoid layout shifts.
+
+SEO AND TECHNICAL DETAILS
+
+Write a strong page title and natural meta description covering RWB Snow Removal LLC, 24-hour service, NYC, Nassau, and Suffolk. Include canonical support that is easy to update, Open Graph tags, favicon derived from the supplied logo, theme-color, and LocalBusiness JSON-LD using only confirmed facts. Do not invent a street address or geographic coordinates. Add robots.txt and sitemap.xml with clearly marked placeholder site URL if the final domain or repository URL is unknown. Add a 404.html that points users back to the homepage and provides the call button.
+
+Use progressive enhancement. The site must remain understandable and callable if JavaScript fails. Avoid broken anchors. Do not create fake pages. If this is a one-page site, navigation should use real section anchors and account for the sticky header.
+
+FINAL VERIFICATION
+
+Before finishing, run the site locally and inspect it at desktop and mobile widths. Check every asset path, telephone link, email link, navigation item, animation fallback, video control, and reduced-motion state. Confirm that no em dash character appears anywhere in the repository. Confirm that all optimized media files are used. Confirm that GitHub Pages can serve the site directly from main and /(root) without a build command. Fix visual bugs rather than merely describing them.
+
+The final result should immediately impress the business owner, but calling RWB must always be easier than watching an animation.
