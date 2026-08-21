@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bellmorewebdesign.github.io/RWB_SnowRemoval/sitemap.xml
