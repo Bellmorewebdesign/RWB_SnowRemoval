@@ -114,9 +114,9 @@
   var chips = $$(".chip");
   var serviceSection = $("#services");
   var machineCopy = {
-    snow: ["Snow removal", "Plow down, salt ready"],
+    snow: ["Snow removal", "Plow down"],
     towing: ["Towing", "Hook out"],
-    junk: ["Junk removal", "Bed up, loaded"],
+    junk: ["Junk removal", "Bed up"],
     power: ["Power washing", "High pressure"],
     soft: ["Soft washing", "Low pressure"]
   };
