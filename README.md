@@ -5,6 +5,10 @@ and JavaScript. There is no build step, no framework, and no server. The whole
 thing runs from static files, and it also works if you open `index.html`
 straight from disk.
 
+The design is modern American workwear: a bright, rounded, high contrast layout
+that alternates white, warm white, pale blue, photographic, and navy sections,
+with red and blue used as accents rather than as wallpaper.
+
 **Primary conversion is a phone call.** Every screen keeps `347-517-9920` one
 tap away: in the header, in the hero, on each service, in the closing section,
 in the footer, and on a fixed bar at the bottom of every phone screen.
@@ -85,26 +89,45 @@ licences, or addresses anywhere in the markup or the structured data.
 Three effects carry the personality of the site. All three are additions on top
 of a page that already reads correctly without them.
 
-**Frost clearing hero.** The hero photograph sits under a light frost layer.
-Scrolling through the first screen wipes it away. On desktop the wipe is a CSS
-radial mask over a small backdrop blur. On phones and tablets the same layer
-simply fades, which keeps the work on the compositor. With reduced motion
-turned on, the hero starts clear and stays clear.
+**Patriotic ribbon.** A thin red, white, and blue ribbon appears three times as
+you scroll: as a divider above the services, as an arc that sweeps around the
+project photograph, and as a divider entering the service area. Each segment
+draws itself in as its section passes through the viewport, using nothing but a
+stroked SVG path and `stroke-dashoffset`. The mid section arc is desktop only,
+and with reduced motion every segment simply renders complete.
 
-**Season change.** A pinned full width panel wipes the winter photograph away
-along a diagonal blade edge to reveal the warm weather photograph, while the
-copy steps through three lines. Below 760 pixels wide, and whenever reduced
-motion is requested, the panel becomes a plain stack: winter photo, all three
-lines, warm photo.
+**RWB service truck.** An original inline SVG truck that changes setup as you
+read each service, or when you tap a service name. The plow drops for snow, a
+boom and hook come out for towing, the bed tips for junk removal, and a wand
+sweeps the ground or a wall for the two washing services. Both washing states
+leave part of the surface dirty so the before and after stays readable when the
+animation is at rest. It is not a trace of the logo, and it needs no library.
 
-**Service machine.** An original inline SVG truck that changes setup as you read
-each service, or when you tap a service name. The plow drops for snow, a boom
-and hook come out for towing, the bed tips and material lands behind the truck
-for junk removal, and a wand sweeps the ground or a wall for the two washing
-services. It is not a trace of the logo, and it needs no library.
+**Seasonal transformation.** A pinned rounded panel wipes the winter photograph
+away along a curved plow blade edge to reveal the warm weather photograph,
+while the colour environment shifts from icy navy to clean white and American
+blue and the copy steps through three lines. The blade is a CSS mask image that
+slides across, so it stays on one layer. Below 760 pixels wide, and whenever
+reduced motion is requested, the panel becomes a plain stack: winter photo, all
+three lines, warm photo.
 
-Ordinary sections use small fade and rise reveals, one count up on the trust
-bar, and a diagonal mask on photographs.
+Ordinary sections use small fade and rise reveals, staggered service cards, and
+a rounded mask wipe on photographs.
+
+## The annotated project photograph
+
+The power washing photograph carries two annotation pills with leader lines:
+
+- **Not yet**, a navy pill on the left, pointing into the lower left section
+  that has not been washed
+- **Washed**, a blue pill with a checkmark on the right, pointing into the
+  upper right brick that has been washed
+
+Both are `aria-hidden`, because the same information is in the image alt text
+and in the caption underneath. Positions live in `assets/css/style.css` under
+`.pin-todo` and `.pin-done`; each pill has a `left`/`top` and its line has a
+length and a rotation, with the target dot placed at the far end of that line.
+If the crop ever changes, those are the six numbers to adjust.
 
 ## Accessibility
 
@@ -120,7 +143,7 @@ bar, and a diagonal mask on photographs.
 
 ## Performance notes
 
-- First load is roughly 370 KB on a phone across nine requests
+- First load is roughly 380 KB on a phone across nine requests
 - Photographs ship at three widths each and are chosen with `srcset`
 - Only the hero image is preloaded, along with the two render critical fonts
 - The fonts are self hosted and subset to the characters the site uses, which
