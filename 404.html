@@ -6,35 +6,42 @@
 <title>Page not found | RWB Snow Removal LLC</title>
 <meta name="description" content="That page does not exist. Call RWB Snow Removal LLC at 347-517-9920, open 24 hours.">
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#08172B">
+<meta name="theme-color" content="#F8FAFC">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!--
-  This page is deliberately self contained. GitHub Pages serves it for any bad
-  path, including deep ones, where relative links to stylesheets and images
-  would not resolve. Everything it needs is inline.
+  Deliberately self contained. GitHub Pages serves this page for any bad path,
+  including deep ones, where relative links to stylesheets would not resolve.
+  The font link below is relative, so it loads on a top level miss and is
+  simply skipped on a deep one. The fallback stack keeps the page correct.
 -->
 <style>
-  /* Relative path, so this loads on a top level miss and is simply skipped on a
-     deep one. The fallback stack below keeps the page correct either way. */
   @font-face {
     font-family: "Barlow Condensed";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
+    font-style: normal; font-weight: 700; font-display: swap;
     src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-style: normal; font-weight: 400; font-display: swap;
+    src: url("assets/fonts/inter-400.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Inter";
+    font-style: normal; font-weight: 600; font-display: swap;
+    src: url("assets/fonts/inter-600.woff2") format("woff2");
   }
   *, *::before, *::after { box-sizing: border-box; }
   :root {
-    --navy-black: #050B16;
-    --deep-navy: #08172B;
-    --signal-red: #C51624;
-    --red-hover: #DD1C30;
-    --snow: #F7FAFC;
-    --ice: #BFE6F5;
-    --steel: #8C9AAA;
-    --display: "Barlow Condensed", "Oswald", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
-    --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --navy: #0B2342;
+    --blue: #1D4F91;
+    --red: #D7192D;
+    --red-hover: #E52436;
+    --white: #F8FAFC;
+    --ice: #DCEFFA;
+    --slate: #5A6675;
+    --display: "Barlow Condensed", "Oswald", "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    --body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   }
   body {
     margin: 0;
@@ -42,113 +49,109 @@
     display: flex;
     align-items: center;
     background:
-      radial-gradient(80% 90% at 15% 10%, rgba(18, 42, 70, .9), transparent 60%),
-      radial-gradient(70% 80% at 90% 90%, rgba(197, 22, 36, .22), transparent 65%),
-      var(--navy-black);
-    color: var(--steel);
+      radial-gradient(70% 60% at 88% 4%, #DCEFFA, transparent 62%),
+      radial-gradient(60% 50% at 4% 96%, #FDECEE, transparent 60%),
+      var(--white);
+    color: var(--slate);
     font-family: var(--body);
-    line-height: 1.65;
+    line-height: 1.68;
     -webkit-font-smoothing: antialiased;
   }
   .wrap { width: 100%; max-width: 760px; margin: 0 auto; padding: 56px 22px; }
-  .mark { display: flex; align-items: center; gap: 12px; margin-bottom: 34px; }
-  .mark svg { width: 46px; height: 46px; flex: none; }
+  .card {
+    background: #fff;
+    border: 1px solid rgba(11, 35, 66, .07);
+    border-radius: 28px;
+    padding: clamp(26px, 5vw, 48px);
+    box-shadow: 0 6px 16px rgba(7, 20, 38, .06), 0 34px 70px rgba(7, 20, 38, .12);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--red) 0 33.34%, #E4EAF1 33.34% 66.67%, var(--blue) 66.67%);
+  }
+  .mark { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+  .mark svg { width: 44px; height: 44px; flex: none; }
   .mark-name {
     font-family: var(--display);
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    color: var(--snow);
-    line-height: 1;
+    font-size: 1.24rem; font-weight: 700;
+    letter-spacing: .01em; text-transform: uppercase;
+    color: var(--navy); line-height: 1.05;
   }
-  .mark-sub { font-size: .64rem; letter-spacing: .18em; text-transform: uppercase; color: var(--steel); }
+  .mark-sub { font-size: .7rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--slate); }
   .code {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-size: .72rem;
-    font-weight: 600;
-    letter-spacing: .22em;
-    text-transform: uppercase;
-    color: var(--ice);
-    margin-bottom: 16px;
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 14px;
   }
-  .code i { display: block; width: 22px; height: 2px; background: var(--signal-red); }
+  .code i { display: block; width: 26px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--red) 0 50%, var(--blue) 50%); }
   h1 {
     font-family: var(--display);
-    font-size: clamp(2.6rem, 11vw, 5rem);
-    font-weight: 700;
-    line-height: .9;
-    text-transform: uppercase;
-    color: var(--snow);
-    margin: 0 0 18px;
+    font-size: clamp(2.4rem, 8vw, 4rem);
+    font-weight: 700; line-height: .95; text-transform: uppercase;
+    color: var(--navy); margin: 0 0 16px;
   }
   p { margin: 0 0 26px; font-size: 1.05rem; max-width: 46ch; }
   .actions { display: flex; flex-wrap: wrap; gap: 12px; }
   .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 54px;
-    padding: 13px 26px;
-    font-family: var(--display);
-    font-size: 1.18rem;
-    font-weight: 700;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-radius: 2px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 54px; padding: 14px 26px;
+    font-family: var(--body); font-size: 1rem; font-weight: 600;
+    text-decoration: none; border: 1px solid transparent; border-radius: 999px;
+    transition: transform .24s cubic-bezier(.22,.78,.26,1), background-color .2s ease, box-shadow .24s ease;
   }
-  .btn-call { background: var(--signal-red); color: #fff; }
-  .btn-call:hover, .btn-call:focus-visible { background: var(--red-hover); }
-  .btn-ghost { border-color: rgba(191, 230, 245, .3); color: var(--snow); }
-  .btn-ghost:hover, .btn-ghost:focus-visible { border-color: var(--ice); }
-  .btn svg { width: 20px; height: 20px; fill: currentColor; }
+  .btn-red { background: var(--red); color: #fff; box-shadow: 0 8px 22px rgba(215, 25, 45, .3); }
+  .btn-red:hover, .btn-red:focus-visible { background: var(--red-hover); transform: translateY(-2px); }
+  .btn-ghost { border-color: rgba(11, 35, 66, .14); color: var(--navy); background: #fff; }
+  .btn-ghost:hover, .btn-ghost:focus-visible { border-color: var(--blue); transform: translateY(-2px); }
+  .btn svg { width: 19px; height: 19px; fill: currentColor; }
   .meta {
-    margin-top: 32px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(191, 230, 245, .14);
-    font-size: .74rem;
-    letter-spacing: .16em;
-    text-transform: uppercase;
+    margin-top: 30px; padding-top: 18px;
+    border-top: 1px solid rgba(11, 35, 66, .1);
+    font-size: .86rem;
   }
-  .meta a { color: var(--ice); }
-  :focus-visible { outline: 3px solid var(--ice); outline-offset: 3px; }
+  .meta a { color: var(--blue); }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
+  @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
 </style>
 </head>
 <body>
   <main class="wrap">
-    <div class="mark">
-      <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-        <path d="M24 2 44 9v18c0 11-8.4 17.4-20 19C12.4 44.4 4 38 4 27V9z" fill="#0d2138" stroke="#BFE6F5" stroke-width="2"/>
-        <path d="M11 27h10l4-6 5 10 3-5h4" fill="none" stroke="#EF233C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>
-        <span class="mark-name">RWB Snow Removal</span><br>
-        <span class="mark-sub">LLC / Open 24 hours</span>
-      </span>
+    <div class="card">
+      <div class="mark">
+        <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="42" height="42" rx="13" fill="#0B2342"/>
+          <path d="M11 30h9l4-7 5 11 3-6h5" fill="none" stroke="#EF3340" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 15h22" stroke="#DCEFFA" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span>
+          <span class="mark-name">RWB Snow Removal</span><br>
+          <span class="mark-sub">LLC / Open 24 hours</span>
+        </span>
+      </div>
+
+      <p class="code"><i></i>Error 404</p>
+      <h1>This page does not exist</h1>
+      <p>The link is wrong or the page was moved. The phone number still works, and it always will.</p>
+
+      <div class="actions">
+        <a class="btn btn-red" href="tel:+13475179920">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+          Call 347-517-9920
+        </a>
+        <a class="btn btn-ghost" href="index.html" id="home">Back to the homepage</a>
+      </div>
+
+      <p class="meta">
+        Snow removal / Towing / Junk removal / Power washing / Soft washing
+        <br>
+        <a href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a>
+      </p>
     </div>
-
-    <p class="code"><i></i>Error 404</p>
-    <h1>This page does not exist.</h1>
-    <p>The link is wrong or the page was moved. The phone number still works, and it always will.</p>
-
-    <div class="actions">
-      <a class="btn btn-call" href="tel:+13475179920">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
-        Call 347-517-9920
-      </a>
-      <a class="btn btn-ghost" href="index.html" id="home">Back to the homepage</a>
-    </div>
-
-    <p class="meta">
-      Snow removal / Towing / Junk removal / Power washing / Soft washing
-      <br>
-      <a href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a>
-    </p>
   </main>
 
   <script>

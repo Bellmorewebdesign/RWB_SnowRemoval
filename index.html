@@ -5,18 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <!--
-  SITE URL: the two absolute URLs below (canonical and og:url) plus the ones in
-  sitemap.xml, robots.txt and the JSON-LD block are the only places the public
-  address of this site appears. The default is the GitHub Pages address for this
-  repository. If a custom domain is added later, replace that address in those
-  files. Everything else on the page uses relative paths, so the site works from
-  a repository subpath, from a custom domain, or from a local folder.
+  SITE URL: the canonical link, the Open Graph tags below, sitemap.xml,
+  robots.txt and the JSON-LD block are the only places the public address of
+  this site appears. The default is the GitHub Pages address for this
+  repository. Everything else on the page uses relative paths, so the site
+  works from a repository subpath, a custom domain, or a local folder.
 -->
 <title>RWB Snow Removal LLC | 24 Hour Snow Removal, NYC and Long Island</title>
 <meta name="description" content="Snow removal, towing, junk removal, power washing, and soft washing across all five NYC boroughs, Nassau County, and Suffolk County. Open 24 hours. Call 347-517-9920.">
 <link rel="canonical" href="https://bellmorewebdesign.github.io/RWB_SnowRemoval/">
-<meta name="theme-color" content="#08172B">
-<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0B2342">
 <meta name="format-detection" content="telephone=yes">
 
 <meta property="og:type" content="website">
@@ -49,8 +47,8 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-header" id="top" data-header>
-  <div class="header-inner">
+<header class="nav-shell" id="top" data-header>
+  <div class="nav-bar">
     <a class="brand" href="#top" aria-label="RWB Snow Removal LLC, back to top">
       <picture>
         <source srcset="assets/images/rwb-logo-transparent.webp" type="image/webp">
@@ -71,10 +69,11 @@
       </ul>
     </nav>
 
-    <div class="header-actions">
-      <a class="btn btn-call btn-header" href="tel:+13475179920">
-        <span class="btn-call-label">Call</span>
-        <span class="btn-call-number">347-517-9920</span>
+    <div class="nav-actions">
+      <a class="btn btn-red btn-nav" href="tel:+13475179920">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+        <span class="nav-call-short">Call</span>
+        <span class="nav-call-full">Call 347-517-9920</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-nav-toggle>
         <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
@@ -86,212 +85,230 @@
   <div class="mobile-menu" id="mobile-menu" data-nav-panel hidden>
     <nav aria-label="Mobile">
       <ul class="mobile-list">
-        <li><a href="#services"><span class="mm-num">01</span> Services</a></li>
-        <li><a href="#seasons"><span class="mm-num">02</span> Seasons</a></li>
-        <li><a href="#work"><span class="mm-num">03</span> Work</a></li>
-        <li><a href="#about"><span class="mm-num">04</span> About</a></li>
-        <li><a href="#area"><span class="mm-num">05</span> Service Area</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#seasons">Seasons</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#area">Service Area</a></li>
       </ul>
     </nav>
-    <div class="mobile-contact">
-      <a class="btn btn-call btn-block" href="tel:+13475179920">Call 347-517-9920</a>
+    <div class="mobile-foot">
+      <a class="btn btn-red btn-block" href="tel:+13475179920">Call 347-517-9920</a>
       <a class="mobile-email" href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a>
-      <p class="mobile-hours">Open 24 hours / NYC and Long Island</p>
+      <p class="mobile-hours"><span class="dot" aria-hidden="true"></span>Open 24 hours, every day</p>
     </div>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- ============ HERO ============ -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero" data-hero>
     <div class="hero-media">
       <img class="hero-img" src="assets/images/snowplow-cab.webp"
-           srcset="assets/images/snowplow-cab-640.webp 640w, assets/images/snowplow-cab-960.webp 960w, assets/images/snowplow-cab.webp 1206w" sizes="100vw"
-           width="1206" height="1573"
+           srcset="assets/images/snowplow-cab-640.webp 640w, assets/images/snowplow-cab-960.webp 960w, assets/images/snowplow-cab.webp 1206w"
+           sizes="100vw" width="1206" height="1573"
            alt="View through the windshield of a plow truck on a snow covered road lined with bare trees"
            fetchpriority="high" decoding="async">
-      <div class="hero-frost" aria-hidden="true"></div>
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-wash" aria-hidden="true"></div>
     </div>
 
-    <div class="hero-inner wrap">
+    <div class="shell hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow hero-eyebrow">
-          <span class="tick" aria-hidden="true"></span>
+        <p class="hero-kicker">
+          <span class="ribbon-chip" aria-hidden="true"><i></i><i></i><i></i></span>
           RWB Snow Removal LLC
         </p>
-        <h1 class="hero-title">
-          <span class="hero-line">One call.</span>
-          <span class="hero-line">Any season.</span>
-          <span class="hero-line hero-line-accent">Any hour.</span>
-        </h1>
+
+        <h1 class="hero-title">Ready when the work gets tough</h1>
+
+        <span class="tri-rule tri-rule-hero" aria-hidden="true"></span>
+
         <p class="hero-sub">Snow removal, towing, junk removal, power washing, and soft washing across New York City and Long Island.</p>
+
         <div class="hero-actions">
-          <a class="btn btn-call btn-lg" href="tel:+13475179920">
-            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+          <a class="btn btn-red btn-lg" href="tel:+13475179920">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
             Call 347-517-9920
           </a>
-          <a class="btn btn-ghost btn-lg" href="#services">View services</a>
+          <a class="btn btn-glass btn-lg" href="#services">
+            Explore services
+            <span class="btn-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </span>
+          </a>
         </div>
-        <ul class="hero-meta">
-          <li>Open 24 hours</li>
-          <li>Residential and commercial</li>
-          <li>All five boroughs, Nassau, Suffolk</li>
-        </ul>
+
+        <p class="hero-areas">Brooklyn / Queens / Manhattan / The Bronx / Staten Island / Nassau / Suffolk</p>
+      </div>
+
+      <div class="hero-side" aria-hidden="true">
+        <span class="status-badge">
+          <span class="status-dot"></span>
+          Open 24 Hours
+        </span>
+        <picture>
+          <source srcset="assets/images/rwb-logo-transparent.webp" type="image/webp">
+          <img class="hero-seal" src="assets/images/rwb-logo-transparent.png" alt="" width="616" height="649"
+               loading="lazy" decoding="async">
+        </picture>
       </div>
     </div>
-
-    <picture>
-      <source srcset="assets/images/rwb-logo-transparent.webp" type="image/webp">
-      <img class="hero-badge" src="assets/images/rwb-logo-transparent.png" alt="" width="616" height="649"
-           loading="lazy" decoding="async" aria-hidden="true">
-    </picture>
-
-    <a class="hero-scroll" href="#services">
-      <span class="hero-scroll-text">Scroll</span>
-      <span class="hero-scroll-line" aria-hidden="true"></span>
-    </a>
   </section>
 
-  <!-- ============ TRUST BAR ============ -->
+  <!-- ===================== TRUST STRIP ===================== -->
   <section class="trust" aria-label="RWB at a glance">
-    <div class="wrap">
-      <ul class="trust-list">
-        <li class="trust-item reveal"><span class="tick" aria-hidden="true"></span>Open <span class="num" data-count-to="24">24</span> hours</li>
-        <li class="trust-item reveal" style="--d:60ms"><span class="tick" aria-hidden="true"></span><span class="num" data-count-to="6">6</span> years in business</li>
-        <li class="trust-item reveal" style="--d:120ms"><span class="tick" aria-hidden="true"></span>NYC + Long Island</li>
-        <li class="trust-item reveal" style="--d:180ms"><span class="tick" aria-hidden="true"></span>Residential + commercial</li>
+    <div class="shell">
+      <ul class="trust-grid">
+        <li class="trust-card reveal">
+          <span class="trust-ico trust-ico-red" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3.5 2"/></svg>
+          </span>
+          <span class="trust-body"><strong>Open 24 Hours</strong><small>Every day of the year</small></span>
+        </li>
+        <li class="trust-card reveal" style="--d:70ms">
+          <span class="trust-ico trust-ico-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17M9 14.5l2 2 4-4"/></svg>
+          </span>
+          <span class="trust-body"><strong>6 Years in Business</strong><small>Six winters on the job</small></span>
+        </li>
+        <li class="trust-card reveal" style="--d:140ms">
+          <span class="trust-ico trust-ico-blue" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          </span>
+          <span class="trust-body"><strong>NYC + Long Island</strong><small>Five boroughs and two counties</small></span>
+        </li>
+        <li class="trust-card reveal" style="--d:210ms">
+          <span class="trust-ico trust-ico-red" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path d="M3 20V11l5.5-4 5.5 4v9"/><path d="M14 20V9.5l3.5-2.5L21 9.5V20M3 20h18"/></svg>
+          </span>
+          <span class="trust-body"><strong>Residential + Commercial</strong><small>Driveways to parking lots</small></span>
+        </li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ SERVICES ============ -->
+  <!-- ===================== SERVICES ===================== -->
   <section class="services section" id="services" aria-labelledby="services-h">
-    <div class="wrap">
+    <div class="ribbon-layer ribbon-services" aria-hidden="true" data-ribbon>
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" focusable="false">
+        <path class="rb rb-red" d="M-40 44C210 -2 360 92 610 78s420-96 670-44"/>
+        <path class="rb rb-white" d="M-40 56C210 10 360 104 610 90s420-96 670-44"/>
+        <path class="rb rb-blue" d="M-40 68C210 22 360 116 610 102s420-96 670-44"/>
+      </svg>
+    </div>
+
+    <div class="shell">
       <div class="sec-head">
-        <p class="eyebrow reveal"><span class="sec-num">01</span> Services</p>
+        <p class="eyebrow reveal"><span class="eyebrow-tick" aria-hidden="true"></span>Services</p>
         <h2 class="sec-title reveal" id="services-h" style="--d:60ms">Five services.<br>One number.</h2>
-        <p class="lede reveal" style="--d:120ms">Snow is the reason most people call the first time. The trucks and the crew work the other nine months too.</p>
+        <p class="lede reveal" style="--d:120ms">Snow is what most people call about first. The trucks stay busy the other nine months of the year.</p>
       </div>
 
       <div class="svc-layout">
+        <!-- WOW 2: interactive RWB service truck -->
         <div class="svc-stage-col">
           <div class="svc-stage" data-stage>
-            <div class="svc-stage-head">
-              <span class="svc-stage-dot" aria-hidden="true"></span>
-              <span class="svc-stage-label" data-machine-label>Plow down</span>
+            <div class="stage-top">
+              <span class="stage-tag" data-machine-tag>Snow removal</span>
+              <span class="stage-note" data-machine-note>Plow down, salt ready</span>
             </div>
 
-            <!-- WOW 3: original simplified service machine, built for this site -->
-            <svg class="machine" viewBox="0 0 420 150" preserveAspectRatio="xMidYMax slice"
-                 role="img" aria-label="Illustration of a service truck that changes its setup for each service"
+            <svg class="machine" viewBox="0 0 420 200" preserveAspectRatio="xMidYMax meet"
+                 role="img" aria-label="Illustration of the RWB service truck changing its setup for each service"
                  data-machine data-state="snow">
               <defs>
                 <linearGradient id="mSky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#0e2440"/>
-                  <stop offset="1" stop-color="#071829"/>
+                  <stop offset="0" stop-color="#eaf5fd"/>
+                  <stop offset="1" stop-color="#dcefFA"/>
                 </linearGradient>
-                <clipPath id="mGround"><rect x="0" y="124" width="420" height="26"/></clipPath>
+                <clipPath id="mGround"><rect x="0" y="150" width="420" height="50"/></clipPath>
               </defs>
 
-              <rect class="m-sky" x="0" y="0" width="420" height="150" fill="url(#mSky)"/>
-
-              <g class="m-ticks">
-                <path d="M0 124h420"/>
-                <path d="M30 118v6M90 118v6M150 118v6M210 118v6M270 118v6M330 118v6M390 118v6"/>
-              </g>
+              <rect class="m-sky" x="0" y="0" width="420" height="200" fill="url(#mSky)"/>
 
               <g clip-path="url(#mGround)">
-                <rect class="m-ground" x="0" y="124" width="420" height="26"/>
+                <rect class="m-ground" x="0" y="150" width="420" height="50"/>
                 <g class="m-snowlayer">
-                  <rect x="0" y="124" width="420" height="26"/>
-                  <path class="m-snowlip" d="M0 126c38 3 64-6 106-4s64 7 110 4 88-7 124-4 80 4 80 4v-6H0z"/>
+                  <rect x="0" y="150" width="420" height="50"/>
+                  <path class="m-snowlip" d="M0 152c40 4 66-6 108-4s64 8 110 4 88-7 124-4 78 4 78 4v-6H0z"/>
                 </g>
-                <path class="m-plowed" d="M112 124H420v26H86z"/>
-                <rect class="m-grime" x="0" y="124" width="420" height="26"/>
-                <rect class="m-clean" x="0" y="124" width="420" height="26"/>
+                <path class="m-plowed" d="M112 150H420v50H86z"/>
+                <rect class="m-grime" x="0" y="150" width="420" height="50"/>
+                <rect class="m-clean" x="0" y="150" width="286" height="50"/>
               </g>
 
               <g class="m-facade">
-                <rect class="m-facade-wall" x="0" y="14" width="64" height="110"/>
-                <rect class="m-facade-clean" x="0" y="14" width="64" height="110"/>
-                <path class="m-facade-lap" d="M0 32h64M0 50h64M0 68h64M0 86h64M0 104h64"/>
-                <rect class="m-facade-win" x="10" y="38" width="18" height="24"/>
-                <rect class="m-facade-win" x="38" y="38" width="18" height="24"/>
-                <rect class="m-facade-win" x="10" y="80" width="18" height="24"/>
-                <rect class="m-facade-win" x="38" y="80" width="18" height="24"/>
+                <rect class="m-facade-wall" x="0" y="42" width="64" height="108" rx="6"/>
+                <rect class="m-facade-clean" x="0" y="42" width="42" height="108" rx="6"/>
+                <path class="m-facade-lap" d="M0 60h64M0 78h64M0 96h64M0 114h64M0 132h64"/>
+                <rect class="m-facade-win" x="10" y="64" width="18" height="24" rx="3"/>
+                <rect class="m-facade-win" x="38" y="64" width="18" height="24" rx="3"/>
+                <rect class="m-facade-win" x="10" y="104" width="18" height="24" rx="3"/>
+                <rect class="m-facade-win" x="38" y="104" width="18" height="24" rx="3"/>
               </g>
 
               <g class="m-towed">
-                <path class="m-towed-cab" d="M350 74h38l14 20h-52z"/>
-                <path class="m-towed-body" d="M336 94h70l12 14v16h-82z"/>
-                <circle class="m-wheel-t" cx="356" cy="116" r="9"/>
-                <circle class="m-wheel-t" cx="400" cy="116" r="9"/>
+                <path class="m-towed-cab" d="M350 100h38l14 20h-52z"/>
+                <path class="m-towed-body" d="M336 120h70l12 14v16h-82z" />
+                <circle class="m-wheel-t" cx="356" cy="142" r="9"/>
+                <circle class="m-wheel-t" cx="400" cy="142" r="9"/>
               </g>
 
-              <path class="m-pile" d="M0 124c0-17 9-28 23-31 11-2 18 6 22 15 2 6 5 11 9 16z"/>
-              <g class="m-dumped">
-                <rect x="316" y="108" width="30" height="16" rx="2"/>
-                <rect x="350" y="112" width="22" height="12" rx="2"/>
-                <rect x="330" y="94" width="18" height="14" rx="2"/>
-              </g>
-              <ellipse class="m-shadow" cx="198" cy="125" rx="112" ry="5"/>
+              <path class="m-pile" d="M0 150c0-17 9-28 23-31 11-2 18 6 22 15 2 6 5 11 9 16z"/>
+              <ellipse class="m-shadow" cx="198" cy="151" rx="112" ry="5"/>
 
               <g class="m-truck">
                 <g class="m-bed">
-                  <path class="m-bed-box" d="M186 42h110v58H186z"/>
-                  <path class="m-bed-rail" d="M186 42h110v9H186z"/>
+                  <path class="m-bed-box" d="M190 86h104a6 6 0 0 1 6 6v34H190z"/>
+                  <path class="m-bed-rail" d="M190 86h104a6 6 0 0 1 6 6v5H190z"/>
                   <g class="m-debris">
-                    <rect x="200" y="62" width="24" height="16" rx="2"/>
-                    <rect x="230" y="58" width="18" height="20" rx="2"/>
-                    <rect x="254" y="64" width="24" height="14" rx="2"/>
+                    <rect x="202" y="100" width="24" height="16" rx="3"/>
+                    <rect x="232" y="96" width="18" height="20" rx="3"/>
+                    <rect x="256" y="102" width="24" height="14" rx="3"/>
                   </g>
-                  <text class="m-plate" x="241" y="92" text-anchor="middle">RWB</text>
+                  <text class="m-plate" x="245" y="120" text-anchor="middle">RWB</text>
                 </g>
 
                 <g class="m-boom">
-                  <rect class="m-boom-arm" x="288" y="70" width="62" height="13" rx="2"/>
-                  <path class="m-boom-hook" d="M344 83v9a10 10 0 0 0 10 10"/>
+                  <rect class="m-boom-arm" x="290" y="92" width="64" height="12" rx="6"/>
+                  <path class="m-boom-hook" d="M348 104v10a10 10 0 0 0 10 10"/>
                 </g>
 
-                <path class="m-cab" d="M96 76V62l20-24h68v38z"/>
-                <path class="m-glass" d="M120 42h58v20h-70z"/>
-                <rect class="m-body" x="92" y="76" width="208" height="30"/>
-                <path class="m-trim" d="M92 96h208"/>
-                <rect class="m-bumper" x="88" y="98" width="14" height="12" rx="2"/>
-                <rect class="m-light" x="92" y="80" width="10" height="8" rx="2"/>
-                <path class="m-mirror" d="M112 46h12v5h-12z"/>
+                <path class="m-cab" d="M100 102V88l20-24h66a6 6 0 0 1 6 6v32z"/>
+                <path class="m-glass" d="M124 68h54v20h-66z"/>
+                <rect class="m-body" x="96" y="102" width="204" height="30" rx="7"/>
+                <path class="m-trim" d="M100 120h196"/>
+                <rect class="m-bumper" x="90" y="122" width="16" height="12" rx="5"/>
+                <rect class="m-light" x="96" y="106" width="11" height="8" rx="3"/>
 
                 <g class="m-wand">
-                  <rect class="m-wand-arm" x="50" y="79" width="46" height="7" rx="3"/>
-                  <rect class="m-wand-tip" x="40" y="76" width="13" height="12" rx="2"/>
+                  <rect class="m-wand-arm" x="52" y="105" width="46" height="7" rx="3.5"/>
+                  <rect class="m-wand-tip" x="42" y="102" width="13" height="12" rx="4"/>
                   <g class="m-spray">
-                    <path class="m-spray-fan" d="M44 78-10 102l22 30 40-48z"/>
-                    <path class="m-splash" d="M2 122c8 2 14 5 18 9"/>
-                    <circle class="m-drop" cx="32" cy="94" r="2.6"/>
-                    <circle class="m-drop" cx="18" cy="108" r="2"/>
-                    <circle class="m-drop" cx="8" cy="118" r="3"/>
+                    <path class="m-spray-fan" d="M46 108-8 132l22 28 40-46z"/>
+                    <circle class="m-drop" cx="32" cy="122" r="2.6"/>
+                    <circle class="m-drop" cx="18" cy="136" r="2"/>
+                    <circle class="m-drop" cx="8" cy="146" r="3"/>
                   </g>
                 </g>
 
                 <g class="m-wheels">
-                  <circle class="m-tyre" cx="138" cy="106" r="18"/>
-                  <circle class="m-hub" cx="138" cy="106" r="7"/>
-                  <circle class="m-tyre" cx="262" cy="106" r="18"/>
-                  <circle class="m-hub" cx="262" cy="106" r="7"/>
+                  <circle class="m-tyre" cx="142" cy="132" r="18"/>
+                  <circle class="m-hub" cx="142" cy="132" r="7"/>
+                  <circle class="m-tyre" cx="264" cy="132" r="18"/>
+                  <circle class="m-hub" cx="264" cy="132" r="7"/>
                 </g>
 
                 <g class="m-plow">
-                  <rect class="m-plow-arm" x="76" y="84" width="24" height="10" rx="2"/>
-                  <path class="m-plow-blade" d="M84 72C60 78 44 90 38 110"/>
-                  <rect class="m-plow-edge" x="20" y="113" width="40" height="9" rx="3"/>
+                  <rect class="m-plow-arm" x="78" y="110" width="24" height="10" rx="5"/>
+                  <path class="m-plow-blade" d="M92 88C70 88 52 96 44 112L34 150h42c2-22 8-38 16-46z"/>
+                  <rect class="m-plow-edge" x="28" y="143" width="52" height="9" rx="4.5"/>
                 </g>
               </g>
             </svg>
 
-            <ul class="svc-chips" data-chips>
+            <ul class="chips" data-chips>
               <li><a class="chip" href="#svc-snow" data-svc="snow">Snow removal</a></li>
               <li><a class="chip" href="#svc-towing" data-svc="towing">Towing</a></li>
               <li><a class="chip" href="#svc-junk" data-svc="junk">Junk removal</a></li>
@@ -301,94 +318,118 @@
           </div>
         </div>
 
-        <ol class="svc-list">
-          <li class="svc svc-lead" id="svc-snow" data-svc="snow">
-            <div class="svc-body">
-              <p class="svc-index">01</p>
-              <h3 class="svc-title">Snow removal</h3>
-              <p class="svc-text">Plowing, shoveling, and salting for driveways, parking lots, walkways, and private roads. Open through the night during a storm, with repeat passes when it keeps falling.</p>
-              <ul class="svc-points">
+        <ol class="svc-cards">
+          <li class="card card-feature reveal" id="svc-snow" data-svc="snow">
+            <div class="card-photo reveal-img">
+              <img src="assets/images/cleared-road.webp"
+                   srcset="assets/images/cleared-road-640.webp 640w, assets/images/cleared-road-960.webp 960w, assets/images/cleared-road.webp 1350w"
+                   sizes="(min-width: 1000px) 34vw, 92vw"
+                   width="1350" height="1800"
+                   alt="Residential road plowed down to bare pavement with snow banked along both sides"
+                   loading="lazy" decoding="async">
+              <span class="photo-tag">Lead service</span>
+            </div>
+            <div class="card-body">
+              <span class="card-ico card-ico-red" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11"/><path d="M9 4.5 12 7l3-2.5M9 19.5 12 17l3 2.5"/></svg>
+              </span>
+              <h3 class="card-title">Snow removal</h3>
+              <p class="card-text">Plowing, shoveling, and salting for driveways, parking lots, walkways, and private roads. We work through the night when a storm runs long, and come back for repeat passes.</p>
+              <ul class="card-points">
                 <li>Driveways and parking lots</li>
                 <li>Walkways, steps, and entrances</li>
                 <li>Salting and de-icing</li>
                 <li>Overnight and repeat passes</li>
               </ul>
-              <a class="svc-link" href="tel:+13475179920">Call about snow<span class="svc-link-arrow" aria-hidden="true"></span></a>
+              <a class="btn btn-quiet" href="tel:+13475179920">Call about snow
+                <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+              </a>
             </div>
-            <figure class="svc-figure reveal-img">
-              <img src="assets/images/cleared-road.webp"
-                   srcset="assets/images/cleared-road-640.webp 640w, assets/images/cleared-road-960.webp 960w, assets/images/cleared-road.webp 1350w"
-                   sizes="(min-width: 900px) 30vw, 90vw"
+          </li>
+
+          <li class="card reveal" id="svc-towing" data-svc="towing" style="--d:0ms">
+            <span class="card-ico card-ico-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M3 16h11v-5H8.5L6 8H3z"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="16" cy="18.5" r="2"/><path d="M14 11h4l3 3.5V16h-3M17 4v4a3 3 0 0 0 3 3"/></svg>
+            </span>
+            <h3 class="card-title">Towing</h3>
+            <p class="card-text">Cars, trucks, and equipment moved when they are stuck in snow, blocking a lot, or headed somewhere else.</p>
+            <a class="btn btn-quiet" href="tel:+13475179920">Call about a tow
+              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+
+          <li class="card reveal" id="svc-junk" data-svc="junk" style="--d:70ms">
+            <span class="card-ico card-ico-red" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M4 8h16l-1.4 12.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8z"/><path d="M2.5 8 6 3.5h12L21.5 8M10 12v6M14 12v6"/></svg>
+            </span>
+            <h3 class="card-title">Junk removal</h3>
+            <p class="card-text">Furniture, appliances, construction debris, and full garage or basement cleanouts. We load it and haul it off.</p>
+            <a class="btn btn-quiet" href="tel:+13475179920">Call about a cleanout
+              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+
+          <li class="card reveal" id="svc-power" data-svc="power" style="--d:0ms">
+            <span class="card-ico card-ico-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M13 3h4v5h-4zM15 8v3M9.5 21c-2 0-3.5-1.5-3.5-3.4C6 15 9.5 11 9.5 11s3.5 4 3.5 6.6c0 1.9-1.5 3.4-3.5 3.4Z"/><path d="M15 11H11"/></svg>
+            </span>
+            <h3 class="card-title">Power washing</h3>
+            <p class="card-text">High pressure cleaning for concrete, pavers, brick, and steps. Built for dirt, algae, and the grey that settles into a hard surface.</p>
+            <a class="btn btn-quiet" href="tel:+13475179920">Call about power washing
+              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+
+          <li class="card reveal" id="svc-soft" data-svc="soft" style="--d:70ms">
+            <div class="card-mini-photo reveal-img">
+              <img src="assets/images/pool-patio.webp"
+                   srcset="assets/images/pool-patio-640.webp 640w, assets/images/pool-patio-960.webp 960w, assets/images/pool-patio.webp 1350w"
+                   sizes="(min-width: 1000px) 17vw, 46vw"
                    width="1350" height="1800"
-                   alt="Residential road plowed down to bare pavement with snow banked along both sides"
+                   alt="Pale stone pool deck after a low pressure wash"
                    loading="lazy" decoding="async">
-              <figcaption>Plowed and passable, curb to curb.</figcaption>
-            </figure>
-          </li>
-
-          <li class="svc" id="svc-towing" data-svc="towing">
-            <div class="svc-body">
-              <p class="svc-index">02</p>
-              <h3 class="svc-title">Towing</h3>
-              <p class="svc-text">Cars, trucks, and equipment moved when they are stuck in snow, blocking a lot, or simply need to be somewhere else. The phone is on at every hour.</p>
-              <a class="svc-link" href="tel:+13475179920">Call about a tow<span class="svc-link-arrow" aria-hidden="true"></span></a>
             </div>
-          </li>
-
-          <li class="svc" id="svc-junk" data-svc="junk">
-            <div class="svc-body">
-              <p class="svc-index">03</p>
-              <h3 class="svc-title">Junk removal</h3>
-              <p class="svc-text">Furniture, appliances, construction debris, yard waste, and full garage or basement cleanouts. We load it, haul it, and leave the space empty.</p>
-              <a class="svc-link" href="tel:+13475179920">Call about a cleanout<span class="svc-link-arrow" aria-hidden="true"></span></a>
-            </div>
-          </li>
-
-          <li class="svc" id="svc-power" data-svc="power">
-            <div class="svc-body">
-              <p class="svc-index">04</p>
-              <h3 class="svc-title">Power washing</h3>
-              <p class="svc-text">High pressure cleaning for concrete, pavers, brick, driveways, walkways, patios, and steps. Built for dirt, algae, and the grey that settles into a hard surface.</p>
-              <a class="svc-link" href="tel:+13475179920">Call about power washing<span class="svc-link-arrow" aria-hidden="true"></span></a>
-            </div>
-          </li>
-
-          <li class="svc" id="svc-soft" data-svc="soft">
-            <div class="svc-body">
-              <p class="svc-index">05</p>
-              <h3 class="svc-title">Soft washing</h3>
-              <p class="svc-text">Low pressure washing for siding, roofs, fences, decks, and painted surfaces that should never take a high pressure hit. Same clean result, gentler on the surface.</p>
-              <a class="svc-link" href="tel:+13475179920">Call about soft washing<span class="svc-link-arrow" aria-hidden="true"></span></a>
-            </div>
+            <span class="card-ico card-ico-blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3s5.5 6.2 5.5 10a5.5 5.5 0 0 1-11 0C6.5 9.2 12 3 12 3Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
+            </span>
+            <h3 class="card-title">Soft washing</h3>
+            <p class="card-text">Low pressure washing for siding, roofs, fences, and painted surfaces that should not take a high pressure hit.</p>
+            <a class="btn btn-quiet" href="tel:+13475179920">Call about soft washing
+              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+            </a>
           </li>
         </ol>
       </div>
     </div>
   </section>
 
-  <!-- ============ WOW 2: SEASON CHANGE ============ -->
+  <!-- ===================== WOW 3: SEASONAL TRANSFORMATION ===================== -->
   <section class="season" id="seasons" aria-labelledby="season-h" data-season>
     <div class="season-track" data-season-track>
-      <div class="season-stage">
+      <div class="season-stage" data-season-stage>
         <div class="season-layer season-warm">
           <img src="assets/images/pool-patio.webp"
-               srcset="assets/images/pool-patio-640.webp 640w, assets/images/pool-patio-960.webp 960w, assets/images/pool-patio.webp 1350w" sizes="100vw"
-               width="1350" height="1800"
-               alt="Large light stone patio and pool deck after cleaning, with green trees behind it"
+               srcset="assets/images/pool-patio-640.webp 640w, assets/images/pool-patio-960.webp 960w, assets/images/pool-patio.webp 1350w"
+               sizes="100vw" width="1350" height="1800"
+               alt="Large pale stone patio and pool deck after cleaning, with green trees behind it"
                loading="lazy" decoding="async">
+          <span class="season-tint season-tint-warm" aria-hidden="true"></span>
         </div>
+
         <div class="season-layer season-winter" data-season-winter>
           <img src="assets/images/cleared-road.webp"
-               srcset="assets/images/cleared-road-640.webp 640w, assets/images/cleared-road-960.webp 960w, assets/images/cleared-road.webp 1350w" sizes="100vw"
-               width="1350" height="1800"
+               srcset="assets/images/cleared-road-640.webp 640w, assets/images/cleared-road-960.webp 960w, assets/images/cleared-road.webp 1350w"
+               sizes="100vw" width="1350" height="1800"
                alt="Snow banked along a cleared road on a grey winter afternoon"
                loading="lazy" decoding="async">
+          <span class="season-tint season-tint-cold" aria-hidden="true"></span>
         </div>
-        <div class="season-blade" aria-hidden="true" data-season-blade></div>
-        <div class="season-veil" aria-hidden="true"></div>
 
-        <div class="season-content wrap">
-          <p class="eyebrow season-eyebrow"><span class="sec-num">02</span> Twelve months</p>
+        <span class="season-blade" aria-hidden="true"></span>
+        <span class="season-scrim" aria-hidden="true"></span>
+
+        <div class="season-content">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-tick" aria-hidden="true"></span>Twelve months</p>
           <h2 class="season-h" id="season-h">
             <span class="season-line" data-stage="0">When the snow falls.</span>
             <span class="season-line" data-stage="1">When the weather clears.</span>
@@ -399,48 +440,71 @@
             <span class="season-note" data-stage="1">Junk hauled off, driveways washed, siding and stone brought back.</span>
             <span class="season-note" data-stage="2">One phone number covers the whole calendar. Call any hour.</span>
           </p>
+          <a class="btn btn-red season-cta" href="tel:+13475179920">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+            Call 347-517-9920
+          </a>
         </div>
 
-        <div class="season-progress" aria-hidden="true">
-          <span class="season-pip" data-pip="0"></span>
-          <span class="season-pip" data-pip="1"></span>
-          <span class="season-pip" data-pip="2"></span>
+        <div class="season-pips" aria-hidden="true">
+          <span data-pip="0"></span><span data-pip="1"></span><span data-pip="2"></span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SELECTED WORK ============ -->
+  <!-- ===================== SEE THE DIFFERENCE ===================== -->
   <section class="work section" id="work" aria-labelledby="work-h">
-    <div class="wrap">
-      <div class="sec-head sec-head-split">
+    <div class="ribbon-layer ribbon-work" aria-hidden="true" data-ribbon>
+      <svg viewBox="0 0 1200 520" preserveAspectRatio="none" focusable="false">
+        <path class="rb rb-red" d="M-40 66C260 66 470 84 690 150c210 62 290 200 250 380"/>
+        <path class="rb rb-white" d="M-40 78C260 78 470 96 690 162c210 62 290 200 250 380"/>
+        <path class="rb rb-blue" d="M-40 90C260 90 470 108 690 174c210 62 290 200 250 380"/>
+      </svg>
+    </div>
+
+    <div class="shell">
+      <div class="sec-head sec-head-wide">
         <div>
-          <p class="eyebrow reveal"><span class="sec-num">03</span> Selected work</p>
-          <h2 class="sec-title reveal" id="work-h" style="--d:60ms">What the work<br>actually looks like.</h2>
+          <p class="eyebrow reveal"><span class="eyebrow-tick" aria-hidden="true"></span>Project</p>
+          <h2 class="sec-title reveal" id="work-h" style="--d:60ms">See the difference</h2>
         </div>
-        <p class="lede reveal" style="--d:120ms">Photos and video from RWB jobs. No stock photography, no borrowed before and afters.</p>
+        <p class="lede reveal" style="--d:120ms">Built up dirt and discoloration can completely change the look of a property. A proper wash brings the original surface back into view.</p>
       </div>
 
       <div class="work-grid">
-        <figure class="work-item work-wide reveal-img">
-          <div class="work-media">
+        <figure class="shot reveal-img">
+          <div class="shot-frame">
             <img src="assets/images/power-washing.webp"
                  srcset="assets/images/power-washing-640.webp 640w, assets/images/power-washing-960.webp 960w, assets/images/power-washing.webp 1350w"
-                 sizes="(min-width: 1000px) 52vw, 92vw"
+                 sizes="(min-width: 1000px) 58vw, 92vw"
                  width="1350" height="1800"
-                 alt="Brick patio during power washing, with a hard line between the cleaned pavers and the dirty pavers"
+                 alt="A brick patio being washed. The lower left section has not been washed yet and looks dull and grey, while the upper right brick has been washed and shows its original red colour."
                  loading="lazy" decoding="async">
-            <span class="work-mark work-mark-a" aria-hidden="true"><i></i>Washed</span>
-            <span class="work-mark work-mark-b" aria-hidden="true"><i></i>Not yet</span>
+
+            <!-- Annotations. The figure caption below carries the same
+                 information for anyone not seeing the image. -->
+            <div class="pin pin-todo" aria-hidden="true">
+              <span class="pin-pill"><span class="pin-dot-sm"></span>Not yet</span>
+              <span class="pin-line"></span>
+              <span class="pin-target"></span>
+            </div>
+            <div class="pin pin-done" aria-hidden="true">
+              <span class="pin-pill">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M4.5 12.5l5 5 10-11"/></svg>
+                Washed
+              </span>
+              <span class="pin-line"></span>
+              <span class="pin-target"></span>
+            </div>
           </div>
-          <figcaption>
-            <span class="work-num">01</span>
-            <span class="work-cap-title">Power washing</span>
-            <span class="work-cap-text">Herringbone brick, mid job. The line between the cleaned section and the rest is the whole pitch.</span>
+          <figcaption class="shot-cap">
+            <span class="shot-cap-title">Brick patio, mid job</span>
+            <span class="shot-cap-text">The lower left is still waiting. The upper right has already been washed. Same patio, same job.</span>
           </figcaption>
         </figure>
 
-        <div class="work-item work-reel reveal-img">
+        <div class="reel-col reveal" style="--d:120ms">
           <div class="reel" data-reel>
             <div class="reel-frame">
               <video class="reel-video" data-reel-video
@@ -448,53 +512,31 @@
                      muted playsinline loop preload="none"
                      aria-label="Silent project reel showing a tile patio before and after cleaning"
                      data-src="assets/video/rwb-work-reel.mp4"></video>
-              <!-- Stands in for the video poster so the still loads lazily and
-                   carries real alt text. It fades out once playback starts. -->
-              <div class="reel-fallback" data-reel-fallback>
+              <div class="reel-still" data-reel-fallback>
                 <img src="assets/video/rwb-work-reel-poster.webp" width="544" height="960"
                      alt="Tile patio before cleaning, with dirt worked into the surface"
                      loading="lazy" decoding="async">
               </div>
               <button class="reel-btn" type="button" data-reel-btn aria-label="Play the project reel">
-                <svg class="reel-icon reel-icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z"/></svg>
-                <svg class="reel-icon reel-icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+                <svg class="reel-ico reel-ico-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13l11-6.5z"/></svg>
+                <svg class="reel-ico reel-ico-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
               </button>
             </div>
           </div>
-          <figcaption>
-            <span class="work-num">02</span>
-            <span class="work-cap-title">Project reel</span>
-            <span class="work-cap-text">Tile patio, before and after. Silent video, plays only when you press it.</span>
-          </figcaption>
+          <p class="reel-cap"><strong>Project reel</strong>Tile patio, before and after. Silent video, plays when you press it.</p>
         </div>
-
-        <figure class="work-item work-tall reveal-img">
-          <div class="work-media">
-            <img src="assets/images/pool-patio.webp"
-                 srcset="assets/images/pool-patio-640.webp 640w, assets/images/pool-patio-960.webp 960w, assets/images/pool-patio.webp 1350w"
-                 sizes="(min-width: 1000px) 38vw, 92vw"
-                 width="1350" height="1800"
-                 alt="Cleaned stone pool deck with a spray wand resting at the edge of the frame"
-                 loading="lazy" decoding="async">
-          </div>
-          <figcaption>
-            <span class="work-num">03</span>
-            <span class="work-cap-title">Soft washing</span>
-            <span class="work-cap-text">Pool deck and patio stone, rinsed down and left clean. Low pressure, no etching.</span>
-          </figcaption>
-        </figure>
       </div>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
+  <!-- ===================== ABOUT ===================== -->
   <section class="about section" id="about" aria-labelledby="about-h">
-    <div class="wrap about-grid">
+    <div class="shell about-grid">
       <div class="about-copy">
-        <p class="eyebrow reveal"><span class="sec-num">04</span> About</p>
-        <h2 class="sec-title reveal" id="about-h" style="--d:60ms">Six years.<br>Nights included.</h2>
-        <p class="about-text reveal" style="--d:120ms">RWB Snow Removal LLC has served New York City and Long Island for six years. From overnight storms to property cleanups and exterior washing, we show up ready to get the job done.</p>
-        <p class="about-text reveal" style="--d:160ms">We are open 24 hours, and the work runs across all five boroughs, Nassau County, and Suffolk County, for residential driveways and commercial lots alike.</p>
+        <p class="eyebrow reveal"><span class="eyebrow-tick" aria-hidden="true"></span>About</p>
+        <h2 class="sec-title reveal" id="about-h" style="--d:60ms">Six years on these roads</h2>
+        <span class="tri-rule reveal" style="--d:100ms" aria-hidden="true"></span>
+        <p class="about-lede reveal" style="--d:140ms">RWB Snow Removal LLC has served New York City and Long Island for six years. From overnight storms to property cleanups and exterior washing, we show up ready to get the job done.</p>
         <dl class="about-facts reveal" style="--d:200ms">
           <div><dt>Hours</dt><dd>Open 24 hours, every day</dd></div>
           <div><dt>In business</dt><dd>6 years</dd></div>
@@ -502,22 +544,31 @@
           <div><dt>Best way to reach us</dt><dd><a href="tel:+13475179920">347-517-9920</a></dd></div>
         </dl>
       </div>
-      <div class="about-panel reveal" style="--d:120ms">
-        <img class="about-logo" src="assets/images/rwb-logo.webp" width="618" height="653"
+
+      <div class="about-seal reveal" style="--d:120ms">
+        <img src="assets/images/rwb-logo.webp" width="618" height="653"
              alt="RWB Snow Removal LLC logo" loading="lazy" decoding="async">
-        <p class="about-panel-text">Snow removal, power washing, junk removal, soft wash, towing.</p>
+        <p>Snow removal / Towing / Junk removal / Power washing / Soft wash</p>
+        <span class="tri-rule tri-rule-wide" aria-hidden="true"></span>
       </div>
     </div>
   </section>
 
-  <!-- ============ SERVICE AREA ============ -->
+  <!-- ===================== SERVICE AREA ===================== -->
   <section class="area section" id="area" aria-labelledby="area-h">
-    <div class="wrap area-grid">
+    <div class="ribbon-layer ribbon-area" aria-hidden="true" data-ribbon>
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none" focusable="false">
+        <path class="rb rb-blue" d="M1240 46c-250-44-410 54-650 40S170 -6 -40 42"/>
+        <path class="rb rb-white" d="M1240 58c-250-44-410 54-650 40S170 6 -40 54"/>
+        <path class="rb rb-red" d="M1240 70c-250-44-410 54-650 40S170 18 -40 66"/>
+      </svg>
+    </div>
+    <div class="shell area-grid">
       <div class="area-copy">
-        <p class="eyebrow reveal"><span class="sec-num">05</span> Service area</p>
-        <h2 class="sec-title reveal" id="area-h" style="--d:60ms">New York City<br>and Long Island.</h2>
+        <p class="eyebrow reveal"><span class="eyebrow-tick" aria-hidden="true"></span>Service area</p>
+        <h2 class="sec-title reveal" id="area-h" style="--d:60ms">New York City<br>and Long Island</h2>
         <p class="lede reveal" style="--d:120ms">All five boroughs plus Nassau and Suffolk County. If your property sits near the edge of that, call and ask.</p>
-        <ul class="area-list reveal" style="--d:160ms">
+        <ul class="area-chips reveal" style="--d:160ms">
           <li>Brooklyn</li>
           <li>Queens</li>
           <li>Manhattan</li>
@@ -526,60 +577,72 @@
           <li>Nassau County</li>
           <li>Suffolk County</li>
         </ul>
-        <a class="btn btn-call" href="tel:+13475179920">Call 347-517-9920</a>
+        <a class="btn btn-red" href="tel:+13475179920">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+          Call 347-517-9920
+        </a>
       </div>
 
       <div class="area-map reveal" style="--d:120ms">
-        <svg class="coverage" viewBox="0 66 640 316" aria-hidden="true" focusable="false">
+        <svg class="coverage" viewBox="-34 56 708 332" aria-hidden="true" focusable="false">
           <defs>
-            <linearGradient id="covFade" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0" stop-color="#BFE6F5" stop-opacity=".55"/>
-              <stop offset="1" stop-color="#BFE6F5" stop-opacity=".08"/>
+            <linearGradient id="covRoute" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#1D4F91" stop-opacity=".16"/>
+              <stop offset=".5" stop-color="#1D4F91" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#D7192D" stop-opacity=".45"/>
             </linearGradient>
             <pattern id="covGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M40 0H0v40" fill="none" stroke="#BFE6F5" stroke-opacity=".08" stroke-width="1"/>
+              <path d="M40 0H0v40" fill="none" stroke="#1D4F91" stroke-opacity=".1" stroke-width="1"/>
             </pattern>
           </defs>
-          <rect x="0" y="0" width="640" height="400" fill="url(#covGrid)"/>
-          <path class="cov-blob" d="M64 246c-18-52 6-104 62-128 44-19 78-46 128-44 46 2 72 30 122 26 54-4 96-22 148-8 46 12 68 44 62 84-6 38-40 62-88 70-54 9-92-6-146 4-52 10-84 42-136 40-64-2-136-14-152-44z"/>
-          <g class="cov-links">
-            <path d="M96 288 190 268 176 176 236 108"/>
-            <path d="M190 268 296 208 420 190 548 152"/>
-            <path d="M176 176 296 208"/>
-            <path d="M236 108 296 208"/>
-          </g>
+          <rect x="-34" y="56" width="708" height="332" fill="url(#covGrid)" rx="18"/>
+          <path class="cov-zone" d="M64 246c-18-52 6-104 62-128 44-19 78-46 128-44 46 2 72 30 122 26 54-4 96-22 148-8 46 12 68 44 62 84-6 38-40 62-88 70-54 9-92-6-146 4-52 10-84 42-136 40-64-2-136-14-152-44z"/>
+          <path class="cov-route" d="M96 288 190 268 176 176 236 108" stroke="url(#covRoute)"/>
+          <path class="cov-route" d="M190 268 296 208 420 190 548 152" stroke="url(#covRoute)"/>
+          <path class="cov-route cov-route-thin" d="M176 176 296 208M236 108 296 208"/>
           <g class="cov-nodes">
-            <g class="cov-node" style="--i:0"><circle cx="96" cy="288" r="7"/><text x="96" y="316">Staten Island</text></g>
-            <g class="cov-node" style="--i:1"><circle cx="190" cy="268" r="7"/><text x="190" y="296">Brooklyn</text></g>
-            <g class="cov-node" style="--i:2"><circle cx="176" cy="176" r="7"/><text x="176" y="160">Manhattan</text></g>
-            <g class="cov-node" style="--i:3"><circle cx="236" cy="108" r="7"/><text x="236" y="92">The Bronx</text></g>
-            <g class="cov-node" style="--i:4"><circle cx="296" cy="208" r="7"/><text x="296" y="236">Queens</text></g>
-            <g class="cov-node" style="--i:5"><circle cx="420" cy="190" r="7"/><text x="420" y="218">Nassau</text></g>
-            <g class="cov-node" style="--i:6"><circle cx="548" cy="152" r="7"/><text x="548" y="180">Suffolk</text></g>
+            <g class="cov-node" style="--i:0"><circle cx="96" cy="288" r="6"/><text x="96" y="316">Staten Island</text></g>
+            <g class="cov-node" style="--i:1"><circle cx="190" cy="268" r="6"/><text x="190" y="296">Brooklyn</text></g>
+            <g class="cov-node" style="--i:2"><circle cx="176" cy="176" r="6"/><text x="176" y="160">Manhattan</text></g>
+            <g class="cov-node" style="--i:3"><circle cx="236" cy="108" r="6"/><text x="236" y="92">The Bronx</text></g>
+            <g class="cov-node" style="--i:4"><circle cx="296" cy="208" r="6"/><text x="296" y="236">Queens</text></g>
+            <g class="cov-node cov-node-red" style="--i:5"><circle cx="420" cy="190" r="6"/><text x="420" y="218">Nassau</text></g>
+            <g class="cov-node cov-node-red" style="--i:6"><circle cx="548" cy="152" r="6"/><text x="548" y="180">Suffolk</text></g>
           </g>
           <g class="cov-legend">
-            <path d="M40 344h64" stroke="url(#covFade)" stroke-width="2"/>
-            <text x="40" y="370">Coverage, not a boundary</text>
+            <path d="M40 344h58"/>
+            <text x="40" y="368">Coverage, not a boundary</text>
           </g>
         </svg>
       </div>
     </div>
   </section>
 
-  <!-- ============ FINAL CALL ============ -->
-  <section class="final section" id="contact" aria-labelledby="final-h">
-    <div class="wrap final-grid">
+  <!-- ===================== FINAL CALL ===================== -->
+  <section class="final" id="contact" aria-labelledby="final-h">
+    <div class="shell final-grid">
       <div class="final-copy">
-        <p class="eyebrow reveal"><span class="tick" aria-hidden="true"></span> Open 24 hours</p>
-        <h2 class="final-title reveal" id="final-h" style="--d:60ms">Need it cleared, hauled, washed, or towed?</h2>
-        <p class="final-sub reveal" style="--d:120ms">Call RWB Snow Removal LLC. Someone is working every hour of every day, in every season.</p>
+        <span class="status-badge status-badge-dark">
+          <span class="status-dot"></span>
+          Open 24 Hours
+        </span>
+        <h2 class="final-title reveal" style="--d:40ms" id="final-h">Need it cleared, hauled, washed, or towed?</h2>
+        <span class="tri-rule tri-rule-wide reveal" style="--d:80ms" aria-hidden="true"></span>
+        <p class="final-sub reveal" style="--d:120ms">One call reaches RWB Snow Removal LLC any hour of any day, in every season.</p>
       </div>
+
       <div class="final-actions reveal" style="--d:160ms">
         <a class="final-phone" href="tel:+13475179920">
-          <span class="final-phone-label">Call now</span>
+          <span class="final-phone-label">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+            Call now
+          </span>
           <span class="final-phone-number">347-517-9920</span>
         </a>
-        <a class="final-email" href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a>
+        <a class="final-email" href="mailto:vasiliostk@gmail.com">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m3.8 7 8.2 6 8.2-6"/></svg>
+          vasiliostk@gmail.com
+        </a>
         <p class="final-note">Snow removal / Towing / Junk removal / Power washing / Soft washing</p>
       </div>
     </div>
@@ -588,7 +651,7 @@
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-grid">
+  <div class="shell footer-grid">
     <div class="footer-brand">
       <picture>
         <source srcset="assets/images/rwb-logo-transparent.webp" type="image/webp">
@@ -596,6 +659,7 @@
              alt="RWB Snow Removal LLC logo" loading="lazy" decoding="async">
       </picture>
       <p class="footer-tag">Snow removal and property services for New York City and Long Island. Open 24 hours.</p>
+      <span class="tri-rule tri-rule-wide" aria-hidden="true"></span>
     </div>
 
     <nav class="footer-col" aria-label="Services">
@@ -622,7 +686,7 @@
       </ul>
     </div>
 
-    <div class="footer-col footer-contact">
+    <div class="footer-col">
       <h2 class="footer-h">Contact</h2>
       <ul>
         <li><a class="footer-phone" href="tel:+13475179920">347-517-9920</a></li>
@@ -632,7 +696,7 @@
     </div>
   </div>
 
-  <div class="wrap footer-bottom">
+  <div class="shell footer-bottom">
     <p>&copy; <span data-year>2026</span> RWB Snow Removal LLC. All rights reserved.</p>
     <p class="footer-credit">Website by Bellmore Web Design</p>
   </div>
@@ -640,7 +704,7 @@
 
 <div class="callbar" data-callbar>
   <a class="callbar-link" href="tel:+13475179920">
-    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
     <span class="callbar-text"><strong>Call 347-517-9920</strong><small>Open 24 hours</small></span>
   </a>
 </div>
