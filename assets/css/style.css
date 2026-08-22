@@ -800,6 +800,9 @@ a { color: inherit; }
   padding: 0;
   overflow: hidden;
   background: linear-gradient(180deg, #fff, #fbfcfe);
+  /* .card aligns children to the start, but this card's photo and body
+     have to span the full width when they are stacked. */
+  align-items: stretch;
 }
 .card-feature .card-body { padding: clamp(20px, 2.4vw, 30px); }
 .card-photo { position: relative; }
