@@ -6,31 +6,31 @@
 
 <!--
   SITE URL: the canonical link, the Open Graph tags below, sitemap.xml,
-  robots.txt and the JSON-LD block are the only places the public address of
-  this site appears. The default is the GitHub Pages address for this
-  repository. Everything else on the page uses relative paths, so the site
-  works from a repository subpath, a custom domain, or a local folder.
+  robots.txt and the JSON-LD blocks are the only places the public address of
+  this site appears, and every one of them points at the custom domain,
+  https://rwbsnowremoval.com/. Everything else on the page uses relative
+  paths, so the files still work from a repository subpath or a local folder.
 -->
-<title>RWB Snow Removal LLC | 24 Hour Snow Removal, NYC and Long Island</title>
-<meta name="description" content="Snow removal, towing, junk removal, power washing, and soft washing across all five NYC boroughs, Nassau County, and Suffolk County. Open 24 hours. Call 347-517-9920.">
-<link rel="canonical" href="https://bellmorewebdesign.github.io/RWB_SnowRemoval/">
+<title>RWB Snow Removal LLC | Snow Removal, Towing &amp; Property Services | NYC &amp; Long Island</title>
+<meta name="description" content="Snow removal, towing, junk removal, power washing and soft washing across NYC, Nassau County and Suffolk County. 24-hour emergency services. Call 347-517-9920.">
+<link rel="canonical" href="https://rwbsnowremoval.com/">
 <meta name="theme-color" content="#0B2342">
 <meta name="format-detection" content="telephone=yes">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RWB Snow Removal LLC">
-<meta property="og:title" content="RWB Snow Removal LLC | 24 Hour Snow Removal, NYC and Long Island">
-<meta property="og:description" content="Snow removal, towing, junk removal, power washing, and soft washing across New York City and Long Island. Open 24 hours. Call 347-517-9920.">
-<meta property="og:url" content="https://bellmorewebdesign.github.io/RWB_SnowRemoval/">
-<meta property="og:image" content="https://bellmorewebdesign.github.io/RWB_SnowRemoval/assets/images/og-cover.jpg">
+<meta property="og:title" content="RWB Snow Removal LLC | Snow Removal, Towing &amp; Property Services | NYC &amp; Long Island">
+<meta property="og:description" content="Snow removal, towing, junk removal, power washing and soft washing across New York City, Nassau County and Suffolk County. 24-hour emergency services. Call 347-517-9920.">
+<meta property="og:url" content="https://rwbsnowremoval.com/">
+<meta property="og:image" content="https://rwbsnowremoval.com/assets/images/og-cover.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="RWB Snow Removal LLC, open 24 hours across New York City and Long Island">
+<meta property="og:image:alt" content="RWB Snow Removal LLC, snow removal, towing, junk removal and exterior washing across New York City and Long Island">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RWB Snow Removal LLC | 24 Hour Snow Removal, NYC and Long Island">
-<meta name="twitter:description" content="Snow removal, towing, junk removal, power washing, and soft washing across New York City and Long Island. Open 24 hours.">
-<meta name="twitter:image" content="https://bellmorewebdesign.github.io/RWB_SnowRemoval/assets/images/og-cover.jpg">
+<meta name="twitter:title" content="RWB Snow Removal LLC | Snow Removal, Towing &amp; Property Services | NYC &amp; Long Island">
+<meta name="twitter:description" content="Snow removal, towing, junk removal, power washing and soft washing across New York City, Nassau County and Suffolk County. 24-hour emergency services.">
+<meta name="twitter:image" content="https://rwbsnowremoval.com/assets/images/og-cover.jpg">
 
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" href="assets/images/favicon-32.png" sizes="32x32">
@@ -41,7 +41,10 @@
 <link rel="preload" href="assets/images/snowplow-cab-960.webp" as="image" fetchpriority="high"
       imagesrcset="assets/images/snowplow-cab-640.webp 640w, assets/images/snowplow-cab-960.webp 960w, assets/images/snowplow-cab.webp 1206w" imagesizes="100vw">
 <link rel="stylesheet" href="assets/css/style.css">
-<script>(function(d){var e=d.documentElement;e.className=e.className.replace('no-js','js');try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){e.classList.add('motion');}}catch(err){}})(document);</script>
+<script>(function(d){var e=d.documentElement;e.className=e.className.replace('no-js','js');try{if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){e.classList.add('motion');}}catch(err){}
+/* Safety net. The scroll reveals start hidden, so if the one script file never
+   arrives, show everything rather than leave the page looking empty. */
+setTimeout(function(){if(e.className.indexOf('rwb-ready')>-1)return;var n=d.querySelectorAll('.reveal,.reveal-img,.area-map'),i=0;for(;i<n.length;i++){n[i].className+=' is-in';}},3000);})(document);</script>
 </head>
 
 <body>
@@ -63,9 +66,9 @@
     <nav class="nav" aria-label="Primary">
       <ul class="nav-list">
         <li><a href="#services">Services</a></li>
-        <li><a href="#work">Work</a></li>
+        <li><a href="service-areas/">Service Areas</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#area">Service Area</a></li>
+        <li><a href="contact/">Contact</a></li>
       </ul>
     </nav>
 
@@ -86,10 +89,15 @@
     <nav aria-label="Mobile">
       <ul class="mobile-list">
         <li><a href="#services">Services</a></li>
-        <li><a href="#seasons">Seasons</a></li>
+        <li class="is-sub"><a href="snow-removal/">Snow removal</a></li>
+        <li class="is-sub"><a href="towing/">Towing</a></li>
+        <li class="is-sub"><a href="junk-removal/">Junk removal</a></li>
+        <li class="is-sub"><a href="power-washing/">Power washing</a></li>
+        <li class="is-sub"><a href="soft-washing/">Soft washing</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#area">Service Area</a></li>
+        <li><a href="service-areas/">Service Areas</a></li>
+        <li><a href="contact/">Contact</a></li>
       </ul>
     </nav>
     <div class="mobile-foot">
@@ -120,11 +128,16 @@
           RWB Snow Removal LLC
         </p>
 
-        <h1 class="hero-title">Ready when the work gets tough</h1>
-
-        <span class="tri-rule tri-rule-hero" aria-hidden="true"></span>
-
-        <p class="hero-sub">Snow removal, towing, junk removal, power washing, and soft washing across New York City and Long Island.</p>
+        <!--
+          One h1. The branding line stays the loud part of the design, and the
+          plain language line underneath is what tells a reader, and a crawler,
+          what the company actually does and where.
+        -->
+        <h1 class="hero-title">
+          <span class="hero-title-main">Ready when the work gets tough</span>
+          <span class="tri-rule tri-rule-hero" aria-hidden="true"></span>
+          <span class="hero-title-sub">Snow removal, towing, junk removal, power washing and soft washing across New York City and Long Island.</span>
+        </h1>
 
         <div class="hero-actions">
           <a class="btn btn-red btn-lg" href="tel:+13475179920">
@@ -139,13 +152,14 @@
           </a>
         </div>
 
-        <p class="hero-areas">Brooklyn / Queens / Manhattan / The Bronx / Staten Island / Nassau / Suffolk</p>
+        <p class="hero-avail"><span class="dot" aria-hidden="true"></span>Open 24 hours, with 24-hour emergency services</p>
+        <p class="hero-areas">Brooklyn / Queens / Manhattan / The Bronx / Staten Island / Nassau County / Suffolk County</p>
       </div>
 
       <div class="hero-side" aria-hidden="true">
         <span class="status-badge">
           <span class="status-dot"></span>
-          Open 24 Hours
+          24-Hour Emergency Services
         </span>
         <picture>
           <source srcset="assets/images/rwb-logo-transparent.webp" type="image/webp">
@@ -164,7 +178,7 @@
           <span class="trust-ico trust-ico-red" aria-hidden="true">
             <svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.5l3.5 2"/></svg>
           </span>
-          <span class="trust-body"><strong>Open 24 Hours</strong><small>Nights, weekends, holidays</small></span>
+          <span class="trust-body"><strong>24-Hour Emergency Services</strong><small>Open 24 hours, every day</small></span>
         </li>
         <li class="trust-card reveal" style="--d:70ms">
           <span class="trust-ico trust-ico-blue" aria-hidden="true">
@@ -202,7 +216,7 @@
       <div class="sec-head">
         <p class="eyebrow reveal"><span class="eyebrow-tick" aria-hidden="true"></span>Services</p>
         <h2 class="sec-title reveal" id="services-h" style="--d:60ms">Five things<br>we do</h2>
-        <p class="lede reveal" style="--d:120ms">Most people find us in the winter. We’re out the rest of the year too, and the hauling and washing work picks up as soon as the snow is gone.</p>
+        <p class="lede reveal" style="--d:120ms">RWB Snow Removal LLC handles snow removal, towing, junk removal, power washing and soft washing for houses and commercial property across New York City and Long Island. Most people find us in the winter. We’re out the rest of the year too, and the hauling and washing work picks up as soon as the snow is gone.</p>
       </div>
 
       <div class="svc-layout">
@@ -333,7 +347,7 @@
               <span class="card-ico card-ico-red" aria-hidden="true">
                 <svg viewBox="0 0 24 24" focusable="false"><path d="M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11"/><path d="M9 4.5 12 7l3-2.5M9 19.5 12 17l3 2.5"/></svg>
               </span>
-              <h3 class="card-title">Snow removal</h3>
+              <h3 class="card-title"><a href="snow-removal/">Snow removal</a></h3>
               <p class="card-text">We plow driveways, parking lots, walkways, and private roads, then salt so it doesn’t ice back over. Long storms get more than one visit.</p>
               <ul class="card-points">
                 <li>Driveways and parking lots</li>
@@ -341,9 +355,12 @@
                 <li>Salting and de-icing</li>
                 <li>Overnight and repeat passes</li>
               </ul>
-              <a class="btn btn-quiet" href="tel:+13475179920">Call about snow
-                <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-              </a>
+              <div class="card-links">
+                <a class="btn btn-quiet" href="snow-removal/">How snow removal works
+                  <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+                </a>
+                <a class="card-call" href="tel:+13475179920">Call 347-517-9920</a>
+              </div>
             </div>
           </li>
 
@@ -351,33 +368,42 @@
             <span class="card-ico card-ico-blue" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M3 16h11v-5H8.5L6 8H3z"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="16" cy="18.5" r="2"/><path d="M14 11h4l3 3.5V16h-3M17 4v4a3 3 0 0 0 3 3"/></svg>
             </span>
-            <h3 class="card-title">Towing</h3>
+            <h3 class="card-title"><a href="towing/">Towing</a></h3>
             <p class="card-text">Stuck in the snow, parked where it shouldn’t be, or it just needs to get across town. Cars, trucks, equipment.</p>
-            <a class="btn btn-quiet" href="tel:+13475179920">Call for a tow
-              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-            </a>
+              <div class="card-links">
+                <a class="btn btn-quiet" href="towing/">More on towing
+                  <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+                </a>
+                <a class="card-call" href="tel:+13475179920">Call 347-517-9920</a>
+              </div>
           </li>
 
           <li class="card reveal" id="svc-junk" data-svc="junk" style="--d:70ms">
             <span class="card-ico card-ico-red" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M4 8h16l-1.4 12.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8z"/><path d="M2.5 8 6 3.5h12L21.5 8M10 12v6M14 12v6"/></svg>
             </span>
-            <h3 class="card-title">Junk removal</h3>
+            <h3 class="card-title"><a href="junk-removal/">Junk removal</a></h3>
             <p class="card-text">Old furniture, appliances, construction debris, whatever is filling up the garage. We do the lifting and it goes on the truck.</p>
-            <a class="btn btn-quiet" href="tel:+13475179920">Call about a cleanout
-              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-            </a>
+              <div class="card-links">
+                <a class="btn btn-quiet" href="junk-removal/">What we haul away
+                  <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+                </a>
+                <a class="card-call" href="tel:+13475179920">Call 347-517-9920</a>
+              </div>
           </li>
 
           <li class="card reveal" id="svc-power" data-svc="power" style="--d:0ms">
             <span class="card-ico card-ico-blue" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M13 3h4v5h-4zM15 8v3M9.5 21c-2 0-3.5-1.5-3.5-3.4C6 15 9.5 11 9.5 11s3.5 4 3.5 6.6c0 1.9-1.5 3.4-3.5 3.4Z"/><path d="M15 11H11"/></svg>
             </span>
-            <h3 class="card-title">Power washing</h3>
+            <h3 class="card-title"><a href="power-washing/">Power washing</a></h3>
             <p class="card-text">High pressure on hard surfaces. Concrete, pavers, brick, steps. It takes off the algae and the grey film that builds up over a few seasons.</p>
-            <a class="btn btn-quiet" href="tel:+13475179920">Call about a wash
-              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-            </a>
+              <div class="card-links">
+                <a class="btn btn-quiet" href="power-washing/">Surfaces we pressure wash
+                  <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+                </a>
+                <a class="card-call" href="tel:+13475179920">Call 347-517-9920</a>
+              </div>
           </li>
 
           <li class="card reveal" id="svc-soft" data-svc="soft" style="--d:70ms">
@@ -392,11 +418,14 @@
             <span class="card-ico card-ico-blue" aria-hidden="true">
               <svg viewBox="0 0 24 24" focusable="false"><path d="M12 3s5.5 6.2 5.5 10a5.5 5.5 0 0 1-11 0C6.5 9.2 12 3 12 3Z"/><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"/></svg>
             </span>
-            <h3 class="card-title">Soft washing</h3>
+            <h3 class="card-title"><a href="soft-washing/">Soft washing</a></h3>
             <p class="card-text">Siding, roofs, fences, painted wood. Low pressure on those, because high pressure will chew them up.</p>
-            <a class="btn btn-quiet" href="tel:+13475179920">Call about soft washing
-              <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
-            </a>
+              <div class="card-links">
+                <a class="btn btn-quiet" href="soft-washing/">When low pressure is right
+                  <span class="btn-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span>
+                </a>
+                <a class="card-call" href="tel:+13475179920">Call 347-517-9920</a>
+              </div>
           </li>
         </ol>
       </div>
@@ -537,8 +566,15 @@
         <h2 class="sec-title reveal" id="about-h" style="--d:60ms">Who you’re calling</h2>
         <span class="tri-rule reveal" style="--d:100ms" aria-hidden="true"></span>
         <p class="about-lede reveal" style="--d:140ms">RWB Snow Removal LLC has served New York City and Long Island for six years. Overnight storms, property cleanups, exterior washing. We show up ready to get the job done.</p>
+        <div class="prose reveal" style="--d:170ms">
+          <p>The name says snow, and snow is where the work started. RWB also tows vehicles, hauls junk off residential and commercial property, and washes down concrete, brick, siding and fencing. One company, one number, all year.</p>
+        </div>
         <dl class="about-facts reveal" style="--d:200ms">
+          <div><dt>Business name</dt><dd>RWB Snow Removal LLC</dd></div>
+          <div><dt>Services</dt><dd>Snow removal, towing, junk removal, power washing, soft washing</dd></div>
+          <div><dt>Service area</dt><dd>NYC, Nassau County, Suffolk County</dd></div>
           <div><dt>Hours</dt><dd>Open 24 hours, every day</dd></div>
+          <div><dt>Emergency</dt><dd>24-Hour Emergency Services</dd></div>
           <div><dt>In business</dt><dd>6 years</dd></div>
           <div><dt>Property types</dt><dd>Residential and commercial</dd></div>
           <div><dt>Best way to reach us</dt><dd><a href="tel:+13475179920">347-517-9920</a></dd></div>
@@ -567,7 +603,7 @@
       <div class="area-copy">
         <p class="eyebrow reveal"><span class="eyebrow-tick" aria-hidden="true"></span>Service area</p>
         <h2 class="sec-title reveal" id="area-h" style="--d:60ms">New York City<br>and Long Island</h2>
-        <p class="lede reveal" style="--d:120ms">All five boroughs, plus Nassau and Suffolk. Not sure if you’re in range? Call and ask.</p>
+        <p class="lede reveal" style="--d:120ms">Serving all five New York City boroughs, Nassau County and Suffolk County. Every RWB service runs across the whole area. Not sure if you’re in range? Call and ask.</p>
         <ul class="area-chips reveal" style="--d:160ms">
           <li>Brooklyn</li>
           <li>Queens</li>
@@ -577,6 +613,10 @@
           <li>Nassau County</li>
           <li>Suffolk County</li>
         </ul>
+        <div class="prose reveal" style="--d:180ms">
+          <p>The <a href="service-areas/">service areas page</a> goes through the coverage in detail, with pages for <a href="service-areas/new-york-city/">New York City</a>, <a href="service-areas/nassau-county/">Nassau County</a> and <a href="service-areas/suffolk-county/">Suffolk County</a>.</p>
+        </div>
+
         <a class="btn btn-red" href="tel:+13475179920">
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
           Call 347-517-9920
@@ -624,11 +664,11 @@
       <div class="final-copy">
         <span class="status-badge status-badge-dark">
           <span class="status-dot"></span>
-          Open 24 Hours
+          24-Hour Emergency Services
         </span>
         <h2 class="final-title reveal" style="--d:40ms" id="final-h">Need it cleared, hauled, washed, or towed?</h2>
         <span class="tri-rule tri-rule-wide reveal" style="--d:80ms" aria-hidden="true"></span>
-        <p class="final-sub reveal" style="--d:120ms">The phone is on. It doesn’t matter what time it is or what season it is.</p>
+        <p class="final-sub reveal" style="--d:120ms">The phone is on. It doesn’t matter what time it is or what season it is. RWB is open 24 hours and provides 24-hour emergency services.</p>
       </div>
 
       <div class="final-actions reveal" style="--d:160ms">
@@ -658,40 +698,41 @@
         <img class="footer-logo" src="assets/images/rwb-logo-transparent.png" width="616" height="649"
              alt="RWB Snow Removal LLC logo" loading="lazy" decoding="async">
       </picture>
-      <p class="footer-tag">Snow, towing, junk, and washing across New York City and Long Island. Open 24 hours.</p>
+      <h2 class="footer-h">RWB Snow Removal LLC</h2>
+      <p class="footer-tag">Snow removal, towing, junk removal, power washing and soft washing across New York City and Long Island. Open 24 hours, with 24-hour emergency services.</p>
       <span class="tri-rule tri-rule-wide" aria-hidden="true"></span>
     </div>
 
     <nav class="footer-col" aria-label="Services">
       <h2 class="footer-h">Services</h2>
       <ul>
-        <li><a href="#svc-snow">Snow removal</a></li>
-        <li><a href="#svc-towing">Towing</a></li>
-        <li><a href="#svc-junk">Junk removal</a></li>
-        <li><a href="#svc-power">Power washing</a></li>
-        <li><a href="#svc-soft">Soft washing</a></li>
+        <li><a href="snow-removal/">Snow removal</a></li>
+        <li><a href="towing/">Towing</a></li>
+        <li><a href="junk-removal/">Junk removal</a></li>
+        <li><a href="power-washing/">Power washing</a></li>
+        <li><a href="soft-washing/">Soft washing</a></li>
       </ul>
     </nav>
 
-    <div class="footer-col">
+    <nav class="footer-col" aria-label="Service areas">
       <h2 class="footer-h">Service area</h2>
       <ul>
-        <li>Brooklyn</li>
-        <li>Queens</li>
-        <li>Manhattan</li>
-        <li>The Bronx</li>
-        <li>Staten Island</li>
-        <li>Nassau County</li>
-        <li>Suffolk County</li>
+        <li><a href="service-areas/new-york-city/">New York City</a></li>
+        <li><a href="service-areas/nassau-county/">Nassau County</a></li>
+        <li><a href="service-areas/suffolk-county/">Suffolk County</a></li>
+        <li><a href="service-areas/">All service areas</a></li>
       </ul>
-    </div>
+      <p class="footer-note">Brooklyn, Queens, Manhattan, The Bronx, Staten Island, Nassau County and Suffolk County.</p>
+    </nav>
 
     <div class="footer-col">
       <h2 class="footer-h">Contact</h2>
       <ul>
         <li><a class="footer-phone" href="tel:+13475179920">347-517-9920</a></li>
         <li><a href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a></li>
-        <li>Open 24 hours, every day</li>
+        <li class="footer-plain">Open 24 hours, every day</li>
+        <li class="footer-plain">24-Hour Emergency Services</li>
+        <li><a href="contact/">Contact RWB</a></li>
       </ul>
     </div>
   </div>
@@ -712,41 +753,76 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://bellmorewebdesign.github.io/RWB_SnowRemoval/#business",
-  "name": "RWB Snow Removal LLC",
-  "url": "https://bellmorewebdesign.github.io/RWB_SnowRemoval/",
-  "image": "https://bellmorewebdesign.github.io/RWB_SnowRemoval/assets/images/rwb-logo.webp",
-  "logo": "https://bellmorewebdesign.github.io/RWB_SnowRemoval/assets/images/rwb-logo.webp",
-  "telephone": "+1-347-517-9920",
-  "email": "vasiliostk@gmail.com",
-  "description": "Snow removal, towing, junk removal, power washing, and soft washing across all five New York City boroughs, Nassau County, and Suffolk County. Open 24 hours.",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  }],
-  "areaServed": [
-    {"@type": "AdministrativeArea", "name": "Brooklyn, New York"},
-    {"@type": "AdministrativeArea", "name": "Queens, New York"},
-    {"@type": "AdministrativeArea", "name": "Manhattan, New York"},
-    {"@type": "AdministrativeArea", "name": "The Bronx, New York"},
-    {"@type": "AdministrativeArea", "name": "Staten Island, New York"},
-    {"@type": "AdministrativeArea", "name": "Nassau County, New York"},
-    {"@type": "AdministrativeArea", "name": "Suffolk County, New York"}
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "RWB Snow Removal LLC services",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Snow removal"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Towing"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Junk removal"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Power washing"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soft washing"}}
-    ]
-  }
+  "@graph": [
+{
+      "@type": "LocalBusiness",
+      "@id": "https://rwbsnowremoval.com/#business",
+      "name": "RWB Snow Removal LLC",
+      "legalName": "RWB Snow Removal LLC",
+      "alternateName": "RWB Snow Removal",
+      "url": "https://rwbsnowremoval.com/",
+      "image": "https://rwbsnowremoval.com/assets/images/og-cover.jpg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://rwbsnowremoval.com/assets/images/rwb-logo.webp",
+        "width": 618,
+        "height": 653
+      },
+      "telephone": "+1-347-517-9920",
+      "email": "vasiliostk@gmail.com",
+      "description": "RWB Snow Removal LLC provides snow removal, towing, junk removal, power washing and soft washing for residential and commercial property across all five New York City boroughs, Nassau County and Suffolk County. Open 24 hours, with 24-hour emergency services.",
+      "address": {"@type": "PostalAddress", "addressRegion": "NY", "addressCountry": "US"},
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }],
+      "areaServed": [
+      {"@type": "City", "name": "New York City", "containedInPlace": {"@type": "State", "name": "New York"}},
+      {"@type": "AdministrativeArea", "name": "Brooklyn, New York"},
+      {"@type": "AdministrativeArea", "name": "Queens, New York"},
+      {"@type": "AdministrativeArea", "name": "Manhattan, New York"},
+      {"@type": "AdministrativeArea", "name": "The Bronx, New York"},
+      {"@type": "AdministrativeArea", "name": "Staten Island, New York"},
+      {"@type": "AdministrativeArea", "name": "Nassau County, New York"},
+      {"@type": "AdministrativeArea", "name": "Suffolk County, New York"},
+      {"@type": "AdministrativeArea", "name": "Long Island, New York"}
+      ],
+      "knowsAbout": ["Snow removal","Snow plowing","Towing","Junk removal","Power washing","Soft washing"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "RWB Snow Removal LLC services",
+        "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Snow removal", "serviceType": "Snow removal", "url": "https://rwbsnowremoval.com/snow-removal/", "provider": {"@id": "https://rwbsnowremoval.com/#business"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Towing", "serviceType": "Towing", "url": "https://rwbsnowremoval.com/towing/", "provider": {"@id": "https://rwbsnowremoval.com/#business"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Junk removal", "serviceType": "Junk removal", "url": "https://rwbsnowremoval.com/junk-removal/", "provider": {"@id": "https://rwbsnowremoval.com/#business"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Power washing", "serviceType": "Power washing", "url": "https://rwbsnowremoval.com/power-washing/", "provider": {"@id": "https://rwbsnowremoval.com/#business"}}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soft washing", "serviceType": "Soft washing", "url": "https://rwbsnowremoval.com/soft-washing/", "provider": {"@id": "https://rwbsnowremoval.com/#business"}}}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rwbsnowremoval.com/#website",
+      "url": "https://rwbsnowremoval.com/",
+      "name": "RWB Snow Removal LLC",
+      "description": "RWB Snow Removal LLC provides snow removal, towing, junk removal, power washing and soft washing for residential and commercial property across all five New York City boroughs, Nassau County and Suffolk County. Open 24 hours, with 24-hour emergency services.",
+      "publisher": {"@id": "https://rwbsnowremoval.com/#business"},
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://rwbsnowremoval.com/#webpage",
+      "url": "https://rwbsnowremoval.com/",
+      "name": "RWB Snow Removal LLC | Snow Removal, Towing and Property Services, NYC and Long Island",
+      "description": "Snow removal, towing, junk removal, power washing and soft washing across New York City, Nassau County and Suffolk County. Open 24 hours, with 24-hour emergency services.",
+      "isPartOf": {"@id": "https://rwbsnowremoval.com/#website"},
+      "about": {"@id": "https://rwbsnowremoval.com/#business"},
+      "primaryImageOfPage": {"@type": "ImageObject", "url": "https://rwbsnowremoval.com/assets/images/og-cover.jpg"},
+      "inLanguage": "en-US"
+    }
+  ]
 }
 </script>
 

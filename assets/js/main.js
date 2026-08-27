@@ -6,6 +6,9 @@
   "use strict";
 
   var root = document.documentElement;
+  /* Tells the inline head script that this file arrived, so its reveal
+     fallback stands down. */
+  root.classList.add("rwb-ready");
   var reduceQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   var motionOK = !reduceQuery.matches;
   var saveData = !!(navigator.connection && navigator.connection.saveData);
