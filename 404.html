@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Page not found | RWB Snow Removal LLC</title>
-<meta name="description" content="That page does not exist. Call RWB Snow Removal LLC at 347-517-9920, open 24 hours.">
+<meta name="description" content="That page does not exist. Call RWB Snow Removal LLC at 347-517-9920 for snow removal, towing, junk removal, power washing or soft washing. Open 24 hours.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#F8FAFC">
 <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
@@ -115,6 +115,27 @@
     font-size: .86rem;
   }
   .meta a { color: var(--blue); }
+  .meta-h {
+    margin: 0 0 10px;
+    font-size: .74rem; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--navy);
+  }
+  .meta-links {
+    display: flex; flex-wrap: wrap;
+    gap: 4px 8px;
+    margin: 0 0 14px; padding: 0;
+    list-style: none;
+  }
+  .meta-links a {
+    display: inline-flex; align-items: center;
+    min-height: 40px; padding: 6px 14px;
+    border: 1px solid rgba(11, 35, 66, .12);
+    border-radius: 999px;
+    font-weight: 600; text-decoration: none;
+  }
+  .meta-links a:hover, .meta-links a:focus-visible { border-color: var(--blue); background: #fff; }
+  .meta-foot { margin: 0; }
   :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
   @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
 </style>
@@ -146,11 +167,19 @@
         <a class="btn btn-ghost" href="index.html" id="home">Back to the homepage</a>
       </div>
 
-      <p class="meta">
-        Snow removal / Towing / Junk removal / Power washing / Soft washing
-        <br>
-        <a href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a>
-      </p>
+      <div class="meta">
+        <p class="meta-h">RWB Snow Removal LLC services</p>
+        <ul class="meta-links">
+          <li><a href="snow-removal/" data-path="snow-removal/">Snow removal</a></li>
+          <li><a href="towing/" data-path="towing/">Towing</a></li>
+          <li><a href="junk-removal/" data-path="junk-removal/">Junk removal</a></li>
+          <li><a href="power-washing/" data-path="power-washing/">Power washing</a></li>
+          <li><a href="soft-washing/" data-path="soft-washing/">Soft washing</a></li>
+          <li><a href="service-areas/" data-path="service-areas/">Service areas</a></li>
+          <li><a href="contact/" data-path="contact/">Contact</a></li>
+        </ul>
+        <p class="meta-foot">Open 24 hours, with 24-hour emergency services. <a href="mailto:vasiliostk@gmail.com">vasiliostk@gmail.com</a></p>
+      </div>
     </div>
   </main>
 
@@ -163,8 +192,11 @@
         var parts = location.pathname.split("/").filter(Boolean);
         var isProjectPage = /\.github\.io$/i.test(location.hostname) && parts.length > 0;
         var home = isProjectPage ? "/" + parts[0] + "/" : "/";
-        if (location.protocol === "http:" || location.protocol === "https:") {
-          document.getElementById("home").setAttribute("href", home);
+        if (location.protocol !== "http:" && location.protocol !== "https:") return;
+        document.getElementById("home").setAttribute("href", home);
+        var links = document.querySelectorAll("[data-path]");
+        for (var i = 0; i < links.length; i++) {
+          links[i].setAttribute("href", home + links[i].getAttribute("data-path"));
         }
       } catch (e) {}
     })();

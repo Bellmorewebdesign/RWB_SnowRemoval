@@ -1,9 +1,20 @@
 # RWB Snow Removal LLC
 
-A one page marketing site for RWB Snow Removal LLC, built as plain HTML, CSS,
-and JavaScript. There is no build step, no framework, and no server. The whole
-thing runs from static files, and it also works if you open `index.html`
-straight from disk.
+The marketing site for RWB Snow Removal LLC, built as plain HTML, CSS, and
+JavaScript. There is no build step, no framework, and no server. The whole
+thing runs from static files.
+
+The site is a homepage plus ten interior pages, one per service and one per
+service area, so each thing the company does has a real crawlable page of its
+own rather than a section anchor. Links between pages use directory URLs, for
+example `snow-removal/`, which resolve on GitHub Pages and on any static
+server. Opening `index.html` from disk still renders the homepage, but the
+directory links only resolve when the files are served rather than opened as
+local files.
+
+**Public address: <https://rwbsnowremoval.com/>.** Every canonical URL, Open
+Graph URL, sitemap entry and structured data ID points there. The old GitHub
+Pages project address is not used anywhere.
 
 The design is modern American workwear: a bright, rounded, high contrast layout
 that alternates white, warm white, pale blue, photographic, and navy sections,
@@ -26,34 +37,65 @@ Actions workflow is required. `.nojekyll` is included so Pages copies the files
 across untouched instead of running them through Jekyll.
 
 Every asset reference in the site is relative, so the same files work from a
-repository subpath (`username.github.io/RWB_SnowRemoval/`), from a custom
-domain, and from a local folder.
+custom domain and from a repository subpath such as
+`username.github.io/RWB_SnowRemoval/`. Pages sit in directories with an
+`index.html` inside, which any static server resolves, GitHub Pages included.
+
+## Pages
+
+| URL | Page | What it is for |
+| --- | --- | --- |
+| `/` | `index.html` | The company overall: all five services, NYC and Long Island |
+| `/snow-removal/` | Snow removal | Plowing, clearing, salting, residential and commercial |
+| `/towing/` | Towing | Cars, trucks, equipment, vehicles stuck in snow |
+| `/junk-removal/` | Junk removal | Hauling and cleanouts |
+| `/power-washing/` | Power washing | High pressure work on concrete, pavers, brick, steps |
+| `/soft-washing/` | Soft washing | Low pressure work on siding, roofs, fences, painted wood |
+| `/service-areas/` | Service areas | The whole coverage area in one place |
+| `/service-areas/new-york-city/` | New York City | The five boroughs |
+| `/service-areas/nassau-county/` | Nassau County | Near Long Island |
+| `/service-areas/suffolk-county/` | Suffolk County | Eastern Long Island |
+| `/contact/` | Contact | Phone, email, hours, what to have ready when calling |
+
+`404.html` is deliberately `noindex` and is not in the sitemap.
 
 ## Changing the public address
 
-The site address appears in exactly four places. If a custom domain is added
-later, update these and nothing else:
+The site address appears in five places. If the domain ever changes, update
+these and nothing else:
 
 | File | What to change |
 | --- | --- |
-| `index.html` | `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`, and the three URLs in the JSON-LD block near the bottom |
-| `sitemap.xml` | the single `<loc>` |
+| every `index.html` | `<link rel="canonical">`, `og:url`, `og:image`, `twitter:image`, and the URLs inside the JSON-LD block at the bottom |
+| `sitemap.xml` | every `<loc>` |
 | `robots.txt` | the `Sitemap:` line |
-| `CNAME` | create this file containing only the domain, if using a custom domain |
+| `CNAME` | the single line naming the domain |
+| `README.md` | this table and the address at the top |
 
-The default is the GitHub Pages address for this repository:
-`https://bellmorewebdesign.github.io/RWB_SnowRemoval/`
+Nothing else in the markup is absolute. Assets, stylesheets, scripts and links
+between pages are all relative, so the same files work from a custom domain,
+from a repository subpath, and from a local static server.
 
 ## Files
 
 ```
-index.html                  the entire site
+index.html                  the homepage
+snow-removal/               one directory per service, each with an index.html
+towing/
+junk-removal/
+power-washing/
+soft-washing/
+service-areas/              the coverage hub, plus one directory per region
+service-areas/new-york-city/
+service-areas/nassau-county/
+service-areas/suffolk-county/
+contact/                    phone, email, hours, service area
 404.html                    self contained, so it renders from any bad path
 robots.txt, sitemap.xml     search engine basics
 favicon.ico                 16, 32, and 48 pixel icons cut from the logo
 apple-touch-icon.png        180 pixel home screen icon
 .nojekyll                   tells GitHub Pages to skip Jekyll
-assets/css/style.css        the one stylesheet
+assets/css/style.css        the one stylesheet, shared by every page
 assets/js/main.js           the one script, progressive enhancement only
 assets/fonts/               Barlow Condensed and Inter, self hosted
 assets/images/              photographs, logo files, social share image
@@ -62,12 +104,18 @@ originals/                  untouched source files, kept for future edits
 docs/                       the original build brief and asset map
 ```
 
+The header, the footer and the closing call section are duplicated across the
+interior pages rather than pulled in at runtime. That is the price of keeping
+the site build free and JavaScript free. If one of them changes, change it in
+every `index.html`.
+
 Nothing in `originals/` or `docs/` is loaded by the site. They are there so the
 next person to edit the images has the full resolution files.
 
 ## Editing the content
 
-Everything visitors read lives in `index.html`. The details that repeat are:
+The homepage copy lives in `index.html`, and each interior page owns its own
+copy. The details that repeat everywhere are:
 
 - **Phone:** `347-517-9920`, linked as `tel:+13475179920`
 - **Email:** `vasiliostk@gmail.com`, linked as `mailto:vasiliostk@gmail.com`
@@ -76,13 +124,21 @@ Everything visitors read lives in `index.html`. The details that repeat are:
 - **Service area:** Brooklyn, Queens, Manhattan, The Bronx, Staten Island,
   Nassau County, Suffolk County
 
-If the phone number ever changes, search `index.html` and `404.html` for
-`3475179920` and `347-517-9920` and replace both forms, then update the
-`telephone` value in the JSON-LD block.
+If the phone number ever changes, search every `.html` file for `3475179920`
+and `347-517-9920`, replace both forms, and update the `telephone` value in
+each JSON-LD block.
 
 The copy deliberately claims nothing that has not been confirmed by the owner.
 There are no invented reviews, ratings, prices, guarantees, response times,
 licences, or addresses anywhere in the markup or the structured data.
+
+## How the site talks about hours
+
+RWB does more than snow, so the site never pairs "24 hour" directly with "snow
+removal". Availability is stated on its own, as **24-Hour Emergency Services**
+or **Open 24 hours**, and the services are listed separately. The title, the
+meta description, the Open Graph tags and the visible copy all follow that
+split. Please keep it when editing.
 
 ## How the moving parts work
 
@@ -131,7 +187,8 @@ If the crop ever changes, those are the six numbers to adjust.
 
 ## Accessibility
 
-- One `h1`, headings in order, and real landmarks
+- One `h1` per page, headings in order, and real landmarks
+- Breadcrumbs on every interior page, in markup and in structured data
 - Skip link, visible focus rings, and a mobile menu that traps focus and closes
   on Escape
 - Every tap target is at least 44 by 44 pixels
@@ -145,7 +202,8 @@ If the crop ever changes, those are the six numbers to adjust.
 
 - First load is roughly 380 KB on a phone across nine requests
 - Photographs ship at three widths each and are chosen with `srcset`
-- Only the hero image is preloaded, along with the two render critical fonts
+- Interior pages preload the two render critical fonts and nothing else,
+  because their largest paint is text rather than a photograph
 - The fonts are self hosted and subset to the characters the site uses, which
   brings four faces down to about 57 KB in total
 - The video is not fetched at all until it is near the viewport
@@ -160,6 +218,22 @@ Current versions of Chrome, Edge, Firefox, and Safari, on desktop and mobile.
 Older browsers without CSS masks or `IntersectionObserver` still get the full
 content, the full navigation, and every phone link. They just do not get the
 motion.
+
+## Structured data
+
+Every page carries one JSON-LD `@graph` describing the same entity:
+
+- `LocalBusiness` at `https://rwbsnowremoval.com/#business`, with the phone
+  number, the email, the opening hours, the areas served, and an offer catalog
+  linking to the five service pages
+- `WebSite`, and a `WebPage` for the page itself
+- `BreadcrumbList` on every page below the homepage
+- `Service` on each service page and each service area page, pointing back at
+  the same business
+
+There is no address beyond the state, no latitude or longitude, no rating, no
+review and no `sameAs`, because none of those are known or public. Do not add
+them to the markup unless they become true and visible on the page.
 
 ---
 

@@ -1,4 +1,9 @@
+# RWB Snow Removal LLC
+# Everything on this site is meant to be crawled, including the CSS, the
+# JavaScript and the images, because Google needs all three to render the
+# pages the way a visitor sees them.
+
 User-agent: *
 Allow: /
 
-Sitemap: https://bellmorewebdesign.github.io/RWB_SnowRemoval/sitemap.xml
+Sitemap: https://rwbsnowremoval.com/sitemap.xml
